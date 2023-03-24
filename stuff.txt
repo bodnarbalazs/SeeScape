@@ -1,1 +1,11 @@
 
+Áramlat API:
+For ocean currents data, you can use the National Oceanic and Atmospheric Administration (NOAA) API. They provide an API that allows you to access ocean currents data for different regions around the world. You can find more information about their API and how to use it on their website: https://tidesandcurrents.noaa.gov/api/
+<metadata>: Contains metadata information about the location of the ocean current observation, including the station ID (id), name (name), latitude (lat), and longitude (lon).
+<observations>: Contains a list of individual current observations (<cu>) over a period of time.
+<cu>: Contains information about a single ocean current observation. The attributes of the <cu> element have the following meanings:
+t: The timestamp of the observation in YYYY-MM-DD HH:MM format.
+s: The speed of the current in meters per second (m/s).
+d: The direction of the current in degrees, where 0° is north and 180° is south.
+b: The "bias", or the quality of the measurement on a scale of 0 to 4, where 0 indicates a good quality measurement and 4 indicates a measurement with low confidence or high error.
+-------------------------------------------------
