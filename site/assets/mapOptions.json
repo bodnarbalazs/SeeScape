@@ -35,14 +35,6 @@
       ]
     },
     {
-      "elementType": "labels.text.stroke",
-      "stylers": [
-        {
-          "color": "#000000"
-        }
-      ]
-    },
-    {
       "featureType": "administrative",
       "elementType": "geometry",
       "stylers": [
