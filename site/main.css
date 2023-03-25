@@ -13,6 +13,7 @@ body {
 /* Header Styles */
 #content{
     margin-top:10rem;
+    height:80vh;
 }
 
 h1 {
@@ -45,6 +46,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    height:20vh;
     background-color: black;
     justify-content: space-between;
     z-index: 999;
