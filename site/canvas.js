@@ -1,20 +1,19 @@
-var canvas = document.getElementById('canvas');
 function initMap() {
-    canvas = document.getElementById('map');
+    const mapElement = document.getElementById('map');
     const mapOptions = {
         zoom: 8,
         center: new google.maps.LatLng(40.7128, -74.0060), // New York coordinates as an example
         disableDefaultUI: true,
     };
 
-    const map = new google.maps.Map(canvas, mapOptions);
+    const map = new google.maps.Map(mapElement, mapOptions);
 
     const resizeMap = () => {
         const width = window.innerWidth;
         const height = window.innerHeight;
 
-        canvas.width = width;
-        canvas.height = height;
+        mapElement.style.width = `${width}px`;
+        mapElement.style.height = `${height}px`;
         google.maps.event.trigger(map, 'resize');
     };
 
@@ -27,7 +26,3 @@ function initMap() {
         console.log('Clicked coordinates:', latitude, longitude);
     });
 }
-
-window.initMap = initMap();
-
-
