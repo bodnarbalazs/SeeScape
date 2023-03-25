@@ -25,6 +25,11 @@ function initMap() {
             // Add the transparent canvas overlay
             const canvas = document.getElementById('myCanvas');
             canvas.addEventListener('click', getPixelColor, false);
+
+            // Add click event listener to Google Maps instance
+            google.maps.event.addListener(map, 'click', function (event) {
+                getPixelColor(event);
+            });
             const ctx = canvas.getContext('2d');
 
             const devicePixelRatio = window.devicePixelRatio || 1;
