@@ -27,6 +27,9 @@ function animate() {
   ctx.beginPath();
   ctx.moveTo(startX, startY);
   ctx.lineTo(x, y);
+  ctx.shadowBlur = 10;
+  ctx.shadowColor = '#fffff';
+  ctx.strokeStyle = '#fffff';
   ctx.stroke();
 
   x += DiffX;
