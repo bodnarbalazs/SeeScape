@@ -17,8 +17,8 @@ body {
     height:80vh;
 }
 
-nav, h1 {
-    font-size: 4rem;
+nav h1 {
+    font-size: large;
     color: #0077be;
     text-align: center;
     text-shadow: 2px 2px #ccc;
