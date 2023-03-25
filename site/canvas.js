@@ -35,3 +35,7 @@ async function loadMapOptions() {
     const data = await response.json();
     return data;
 }
+
+      // Get the canvas element and context
+      const canvas = document.getElementById('myCanvas');
+      const ctx = canvas.getContext('2d');
