@@ -10,7 +10,7 @@ var DiffX = (startX-endX)/200;
 var DiffY = (startY-endY)/200;
 
 var endX = 700;
-var endY = 100;
+var endY = 500;
 
 ctx.strokeStyle = '#adfc03';
 ctx.lineWidth = 2;
