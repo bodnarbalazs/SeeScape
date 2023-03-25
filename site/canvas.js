@@ -70,8 +70,8 @@ async function loadMapOptions() {
 
 async function getPixelColor(event) {
     const { lat, lng, zoom } = getMapInfo();
-    const x = event.offsetX;
-    const y = event.offsetY;
+    const x = event.pageX - canvas.offsetLeft;
+    const y = event.pageY - canvas.offsetTop;
 
     console.log(`Clicked coordinates (unscaled): ${x}, ${y}`);
 
@@ -80,6 +80,7 @@ async function getPixelColor(event) {
     const color = await getClickedPixelColor(imageURL, x, y);
     console.log(`Clicked pixel color: rgba(${color.join(',')})`);
 }
+
 
 
 
