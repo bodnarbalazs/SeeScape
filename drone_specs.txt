@@ -2,6 +2,8 @@ DJI RS 3 Mini
 Nikon z30 30mm
 SunnySky XS High Power X6215S Brushless Motors
 12S 21000mAH Drone Battery Pack  44Volt
-Albatross 3000mm wingspan 30:1 glide ratio lightweight carbon composite arirframe
+Albatross 3000mm wingspan 30:1 glide ratio lightweight carbon composite arirframe ipx4
 FLIPSKY ESC 50A 
 F7 flight controller
+
+plus feature thermal cam vue tz20
