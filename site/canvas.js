@@ -15,7 +15,7 @@ function drawTextOnCanvas() {
 
     // Calculate the x and y position to center the text
     const x = canvas.width / 4;
-    const y = canvas.height / 4;
+    const y = canvas.height / 8;
 
     // Write the text to the canvas
     ctx.fillStyle = color;
