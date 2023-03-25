@@ -73,11 +73,24 @@ async function getPixelColor(event) {
     const x = event.offsetX;
     const y = event.offsetY;
 
+    // Account for canvas scaling
+    const devicePixelRatio = window.devicePixelRatio || 1;
+    const ctx = canvas.getContext('2d');
+    const backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+        ctx.mozBackingStorePixelRatio ||
+        ctx.msBackingStorePixelRatio ||
+        ctx.oBackingStorePixelRatio ||
+        ctx.backingStorePixelRatio || 1;
+    const ratio = devicePixelRatio / backingStoreRatio;
+    const scaledX = x * ratio;
+    const scaledY = y * ratio;
+
     const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=${canvas.width}x${canvas.height}&maptype=roadmap&key=AIzaSyD8H08Wmk0JAuf8C91jD-oQOVDRuUkqDyk`;
 
-    const color = await getClickedPixelColor(imageURL, x, y);
+    const color = await getClickedPixelColor(imageURL, scaledX, scaledY);
     console.log(`Clicked pixel color: rgba(${color.join(',')})`);
 }
+
 
 
 function getMapInfo() {
