@@ -5,7 +5,7 @@ var ctx;
 function drawTextOnCanvas() {
     // Clear the canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+    canvas = document.getElementById("myCanvas");
     // Define the text settings
     const text = "Place a Dronebase on the coast";
     const font = "5vw Arial";
@@ -93,6 +93,8 @@ const ratio = devicePixelRatio / backingStoreRatio;
 canvas.width = canvas.clientWidth * ratio;
 canvas.height = canvas.clientHeight * ratio;
 ctx.scale(ratio, ratio);
+
+drawTextOnCanvas();
 
 // Add click event listener to the canvas
 canvas.addEventListener("click", async function (event) {
