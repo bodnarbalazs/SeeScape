@@ -35,6 +35,8 @@ function initMap() {
                 }
             },
             "disableDefaultUI": true,
+        },
+        {
             "elementType": "geometry",
             "stylers": [
                 {
