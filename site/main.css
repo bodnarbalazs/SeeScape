@@ -18,10 +18,9 @@ body {
 }
 
 nav h1 {
-    font-size: large;
-    color: #0077be;
+    font-size: 1.5em;
+    color: white;
     text-align: center;
-    text-shadow: 2px 2px #ccc;
     font-family: 'Nunito Sans';
 }
 
