@@ -8,6 +8,7 @@ var y=100;
 
 var DiffX = (startX-endX)/200;
 var DiffY = (startY-endY)/200;
+console.log(DiffX);
 
 var endX = 700;
 var endY = 500;
@@ -31,7 +32,9 @@ function animate() {
   
     // Stop the animation when the line reaches the endpoint
     if (x == endX && y == endY) {
+      console.log("Vége öreg");
       cancelAnimationFrame(animationId);
+      
     } else {
       animationId = requestAnimationFrame(animate);
     }
