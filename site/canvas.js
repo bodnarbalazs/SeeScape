@@ -3,7 +3,7 @@ function initMap() {
     const mapElement = document.getElementById('map');
     const mapOptions = {
         zoom: 8,
-        center: new google.maps.LatLng(40.7128, -74.0060), // New York coordinates as an example
+        center: new google.maps.LatLng(44.0404, -6.6645), // New York coordinates as an example
         disableDefaultUI: true,
         mapId: '1a1947e4867678df'
     };
