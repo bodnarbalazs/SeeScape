@@ -30,7 +30,7 @@ function animate() {
     y += DiffY;
   
     // Stop the animation when the line reaches the endpoint
-    if (x >= endX && y >= endY) {
+    if (x == endX && y == endY) {
       cancelAnimationFrame(animationId);
     } else {
       animationId = requestAnimationFrame(animate);
