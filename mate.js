@@ -18,8 +18,8 @@ if (startY > endY) {
   DiffY = -DiffY;
 }
 
-ctx.strokeStyle = '#adfc03';
-ctx.lineWidth = 2;
+ctx.strokeStyle = '#fffff';
+ctx.lineWidth = 3;
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
