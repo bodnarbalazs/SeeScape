@@ -6,6 +6,14 @@ function initMap() {
         center: new google.maps.LatLng(44.3404, -6.9745), // New York coordinates as an example
         minZoom: 7,
         maxZoom: 10,
+        restriction: {
+            latLngBounds: {
+                north: 45,
+                south: 43,
+                east: -6,
+                west: -7.5,
+            },
+        },
         disableDefaultUI: true,
         mapId: '1a1947e4867678df'
     };
