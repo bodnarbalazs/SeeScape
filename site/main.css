@@ -1,7 +1,8 @@
 /* Global Styles */
 
 body {
-    background-color: #2c344e;
+    background: rgb(40,53,97);
+    background: radial-gradient(circle, rgba(40,53,97,1) 12%, rgba(30,30,85,1) 100%);
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
