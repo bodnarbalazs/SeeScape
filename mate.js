@@ -28,8 +28,8 @@ function animate() {
   ctx.moveTo(startX, startY);
   ctx.lineTo(x, y);
   ctx.shadowBlur = 10;
-  ctx.shadowColor = '#fffff';
-  ctx.strokeStyle = '#fffff';
+  ctx.shadowColor = 'white';
+  ctx.strokeStyle = 'white';
   ctx.stroke();
 
   x += DiffX;
