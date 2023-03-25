@@ -14,7 +14,7 @@ function initMap() {
                 west: -7.5,
             },
         },
-        disableDefaultUI: true,
+        disableDefaultUI: true
         
     };
 
