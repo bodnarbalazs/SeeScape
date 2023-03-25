@@ -15,7 +15,7 @@ function initMap() {
             },
         },
         disableDefaultUI: true,
-        mapId: '1a1947e4867678df'
+        
     };
 
     const map = new google.maps.Map(mapElement, mapOptions);
