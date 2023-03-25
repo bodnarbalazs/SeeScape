@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&display=swap');
 /* Global Styles */
 
 body {
     background: rgb(28,37,65);
-    background: radial-gradient(circle, rgba(28,37,65,1) 12%, rgba(24,24,58,1) 100%);
+    background: radial-gradient(circle, rgba(28,37,65,1) 12%, rgba(16,16,36,1) 100%);
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -15,12 +16,13 @@ body {
     margin-top:10rem;
 }
 
-h1 {
+nav, h1 {
     font-size: 4rem;
     color: #0077be;
     margin: 2rem;
     text-align: center;
     text-shadow: 2px 2px #ccc;
+    font-family: 'Nunito Sans';
 }
 
 /* Paragraph Styles */
