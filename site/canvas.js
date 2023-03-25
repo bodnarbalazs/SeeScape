@@ -1,6 +1,6 @@
 var canvas = document.getElementById('canvas');
 function initMap() {
-    canvas = document.getElementById('canvas');
+    canvas = document.getElementById('map');
     const mapOptions = {
         zoom: 8,
         center: new google.maps.LatLng(40.7128, -74.0060), // New York coordinates as an example
