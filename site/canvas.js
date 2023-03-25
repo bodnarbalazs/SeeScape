@@ -66,18 +66,6 @@ const canvas = document.getElementById('myCanvas');
       ctx.textAlign = textAlign;
       ctx.fillText(text, x, y);
       
-      var img = new Image();
-      img.src = "image.png";
-      img.onload = function() {
-          ctx.drawImage(img, 0, 0);
-      }
-      canvas.addEventListener("click", function(event) {
-          var x = event.offsetX;
-          var y = event.offsetY;
-          var pixelData = ctx.getImageData(x, y, 1, 1).data;
-          var color = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
-          console.log(color);
-      });
 async function getClickedPixelColor(imageURL, x, y) {
     return new Promise((resolve, reject) => {
         const img = new Image();
