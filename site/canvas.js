@@ -1,4 +1,5 @@
 var map;
+var canvas;
 function drawTextOnCanvas() {
     // Define the text settings
     const text = "Place a Dronebase on the coast";
@@ -70,7 +71,7 @@ async function isLand(latitude, longitude) {
 }
 
 // Get the canvas element and context
-const canvas = document.getElementById("myCanvas");
+canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
 const devicePixelRatio = window.devicePixelRatio || 1;
