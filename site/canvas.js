@@ -1,4 +1,4 @@
-
+var map;
 function initMap() {
     loadMapOptions()
         .then((data) => {
@@ -6,7 +6,7 @@ function initMap() {
             const mapStyles = data.mapStyles;
 
             const mapElement = document.getElementById('map');
-            const map = new google.maps.Map(mapElement, mapOptions);
+            map = new google.maps.Map(mapElement, mapOptions);
             map.setOptions({ styles: mapStyles });
 
             const resizeMap = () => {
@@ -113,7 +113,6 @@ async function getPixelColor(event) {
 }
 
 function getMapInfo() {
-    const map = /* your Google Maps instance */;
     const center = map.getCenter();
     const lat = center.lat();
     const lng = center.lng();
