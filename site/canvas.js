@@ -1,3 +1,4 @@
+
 function initMap() {
     loadMapOptions()
         .then((data) => {
