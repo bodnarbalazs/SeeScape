@@ -1,3 +1,3 @@
 function demoClicked() {
-    location.replace("");
+    location.replace("/site/start.html");
 }
