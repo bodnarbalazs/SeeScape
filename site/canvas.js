@@ -66,16 +66,20 @@ ctx.scale(ratio, ratio);
 
 // Define the text settings
 const text = "Place a Dronebase on the coast";
-const x = canvas.width / 6+10; // center horizontally
-const y = canvas.height / 20; // center vertically
 const font = "5vw Arial";
 const color = "white";
 const textAlign = "center";
+const textBaseline = "middle";
+
+// Calculate the x and y position to center the text
+const x = canvas.width / 2;
+const y = canvas.height / 2;
 
 // Write the text to the canvas
 ctx.fillStyle = color;
 ctx.font = font;
 ctx.textAlign = textAlign;
+ctx.textBaseline = textBaseline;
 ctx.fillText(text, x, y);
 
 // Add click event listener to the canvas
