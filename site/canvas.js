@@ -75,7 +75,7 @@ async function getPixelColor(event) {
 
     console.log(`Clicked coordinates (unscaled): ${x}, ${y}`);
 
-    const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=${canvas.width}x${canvas.height}&maptype=roadmap&key=YOUR_API_KEY`;
+    const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=${canvas.width}x${canvas.height}&maptype=roadmap&key=AIzaSyD8H08Wmk0JAuf8C91jD-oQOVDRuUkqDyk`;
 
     const color = await getClickedPixelColor(imageURL, x, y);
     console.log(`Clicked pixel color: rgba(${color.join(',')})`);
