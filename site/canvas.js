@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas');
+var canvas = document.getElementById('canvas');
 function initMap() {
     canvas = document.getElementById('canvas');
     const mapOptions = {
