@@ -1,3 +1,6 @@
+var canvas = document.getElementById('mycanvas');
+var ctx = canvas.getContext('2d');
+
 var startX = 100;
 var startY = 100;
 
