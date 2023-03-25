@@ -52,9 +52,12 @@ function animateCircle() {
     // Clear the canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw the circle
+    // Set the global alpha value back to 1
+    ctx.globalAlpha = 1;
+
+    // Draw the half-circle
     ctx.beginPath();
-    ctx.arc(endX, endY, radius, 0, 2 * Math.PI);
+    ctx.arc(endX, endY, radius, Math.PI, 2 * Math.PI);
     ctx.shadowBlur = 10;
     ctx.shadowColor = 'white';
     ctx.strokeStyle = 'white';
