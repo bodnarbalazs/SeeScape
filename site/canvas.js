@@ -70,14 +70,15 @@ async function loadMapOptions() {
 
 async function getPixelColor(event) {
     const { lat, lng, zoom } = getMapInfo();
-    const x = event.clientX;
-    const y = event.clientY;
+    const x = event.offsetX;
+    const y = event.offsetY;
 
     const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=${canvas.width}x${canvas.height}&maptype=roadmap&key=AIzaSyD8H08Wmk0JAuf8C91jD-oQOVDRuUkqDyk`;
 
     const color = await getClickedPixelColor(imageURL, x, y);
     console.log(`Clicked pixel color: rgba(${color.join(',')})`);
 }
+
 
 function getMapInfo() {
     const center = map.getCenter();
