@@ -1,5 +1,23 @@
 [
   {
+    "zoom": 8,
+    "center": {
+      "lat": 40.7128,
+      "lng": -74.0060
+    },
+    "disableDefaultUI": true,
+    "minZoom": 9,
+    "maxZoom": 13,
+    "restriction": {
+      "latLngBounds": {
+        "north": 45,
+        "south": 43,
+        "east": -6,
+        "west": -7.5
+      }
+    }
+  },
+  {
     "elementType": "geometry",
     "stylers": [
       {
