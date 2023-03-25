@@ -1,4 +1,5 @@
 var map;
+
 function initMap() {
     loadMapOptions()
         .then((data) => {
@@ -21,11 +22,36 @@ function initMap() {
             window.addEventListener('resize', resizeMap);
             resizeMap();
 
-            google.maps.event.addListener(map, 'click', function (event) {
-                const latitude = event.latLng.lat();
-                const longitude = event.latLng.lng();
-                console.log('Clicked coordinates:', latitude, longitude);
-            });
+            // Add the transparent canvas overlay
+            const canvas = document.getElementById('myCanvas');
+            canvas.addEventListener('click', getPixelColor, false);
+            const ctx = canvas.getContext('2d');
+
+            const devicePixelRatio = window.devicePixelRatio || 1;
+            const backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+                ctx.mozBackingStorePixelRatio ||
+                ctx.msBackingStorePixelRatio ||
+                ctx.oBackingStorePixelRatio ||
+                ctx.backingStorePixelRatio || 1;
+            const ratio = devicePixelRatio / backingStoreRatio;
+            canvas.width = canvas.clientWidth * ratio;
+            canvas.height = canvas.clientHeight * ratio;
+            ctx.scale(ratio, ratio);
+
+            // Define the text settings
+            const text = 'Place a Dronebase on the coast';
+            const x = canvas.width / 4; // center horizontally
+            const y = canvas.height / 20; // center vertically
+            const font = '5vw Arial';
+            const color = 'white';
+            const textAlign = 'center';
+
+            // Write the text to the canvas
+            ctx.fillStyle = color;
+            ctx.font = font;
+            ctx.textAlign = textAlign;
+            ctx.fillText(text, x, y);
+
         })
         .catch((error) => console.error('Error fetching map options:', error));
 }
@@ -36,59 +62,6 @@ async function loadMapOptions() {
     return data;
 }
 
-      // Get the canvas element and context
-const canvas = document.getElementById('myCanvas');
-      canvas.addEventListener('click', getPixelColor, false);
-      const ctx = canvas.getContext('2d');
-
-      const devicePixelRatio = window.devicePixelRatio || 1;
-      const backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
-                                 ctx.mozBackingStorePixelRatio ||
-                                 ctx.msBackingStorePixelRatio ||
-                                 ctx.oBackingStorePixelRatio ||
-                                 ctx.backingStorePixelRatio || 1;
-      const ratio = devicePixelRatio / backingStoreRatio;
-      canvas.width = canvas.clientWidth * ratio;
-      canvas.height = canvas.clientHeight * ratio;
-      ctx.scale(ratio, ratio);
-
-         // Define the text settings
-      const text = 'Place a Dronebase on the coast';
-      const x = canvas.width / 4; // center horizontally
-      const y = canvas.height / 20; // center vertically
-      const font = '5vw Arial';
-      const color = 'white';
-      const textAlign = 'center';
-
-      // Write the text to the canvas
-      ctx.fillStyle = color;
-      ctx.font = font;
-      ctx.textAlign = textAlign;
-      ctx.fillText(text, x, y);
-     
-async function getClickedPixelColor(imageURL, x, y) {
-    return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.crossOrigin = 'Anonymous';
-        img.src = imageURL;
-
-        img.onload = () => {
-            const hiddenCanvas = document.createElement('canvas');
-            hiddenCanvas.width = img.width;
-            hiddenCanvas.height = img.height;
-
-            const ctx = hiddenCanvas.getContext('2d');
-            ctx.drawImage(img, 0, 0);
-
-            const imageData = ctx.getImageData(x, y, 1, 1).data;
-            resolve(imageData);
-        };
-
-        img.onerror = () => {
-            reject('Error loading image');
-        };
-    });
-}
 async function getPixelColor(event) {
     const { lat, lng, zoom } = getMapInfo();
     const x = event.clientX;
@@ -108,3 +81,22 @@ function getMapInfo() {
 
     return { lat, lng, zoom };
 }
+
+async function getClickedPixelColor(imageURL, x, y) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = 'Anonymous';
+        img.src = imageURL;
+
+        img.onload = () => {
+            const hiddenCanvas = document.createElement('canvas');
+            hiddenCanvas.width = img.width;
+            hiddenCanvas.height = img.height;
+
+            const ctx = hiddenCanvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+
+            const imageData = ctx.getImageData(x, y, 1, 1).data;
+            resolve(imageData);
+        };
+
