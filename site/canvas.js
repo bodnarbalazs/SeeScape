@@ -41,22 +41,11 @@ async function loadMapOptions() {
 }
 
 async function isLand(latitude, longitude) {
-    const apiKey = "YOUR_API_KEY";
-    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
+    if (true) {
 
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
+    }
+    else {
 
-        if (data.status === "OK") {
-            const types = data.results[0].types;
-            return !types.includes("natural_feature") || types.includes("establishment");
-        } else {
-            throw new Error(`Geocoding API error: ${data.status}`);
-        }
-    } catch (error) {
-        console.error("Error fetching geocoding data:", error);
-        return false;
     }
 }
 
@@ -77,7 +66,7 @@ ctx.scale(ratio, ratio);
 
 // Define the text settings
 const text = "Place a Dronebase on the coast";
-const x = canvas.width / 4; // center horizontally
+const x = canvas.width / 6; // center horizontally
 const y = canvas.height / 20; // center vertically
 const font = "5vw Arial";
 const color = "white";
