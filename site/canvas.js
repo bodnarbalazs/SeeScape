@@ -43,7 +43,7 @@ async function loadMapOptions() {
          // Define the text settings
       const text = 'Place a Dronebase on the coast';
       const x = canvas.width / 2; // center horizontally
-      const y = canvas.height / 2; // center vertically
+      const y = canvas.height / 10; // center vertically
       const font = '1vw Arial';
       const color = 'white';
       const textAlign = 'center';
