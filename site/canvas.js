@@ -65,19 +65,11 @@ async function loadMapOptions() {
       ctx.textAlign = textAlign;
       ctx.fillText(text, x, y);
       
-      canvas.addEventListener('mousedown', (event) => {
-        // Check if the left mouse button was clicked
-        if (event.button === 0) {
-          // Get the click coordinates relative to the canvas
-          const x = event.offsetX;
-          const y = event.offsetY;
-
-          // Set the fill color to red
-          ctx.fillStyle = 'red';
-
-          // Draw a red circle at the click coordinates
-          ctx.beginPath();
-          ctx.arc(x, y, 5, 0, 2 * Math.PI);
-          ctx.fill();
-        }
+      // Get the color of the point when it's clicked
+      canvas.addEventListener("click", function(event) {
+        const x = event.offsetX;
+        const y = event.offsetY;
+        const imageData = context.getImageData(x, y, 1, 1);
+        const color = imageData.data;
+        console.log("Clicked point color:", color);
       });
