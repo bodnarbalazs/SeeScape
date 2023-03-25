@@ -1,3 +1,4 @@
+
 function initMap() {
     const mapElement = document.getElementById('map');
     const mapOptions = {
