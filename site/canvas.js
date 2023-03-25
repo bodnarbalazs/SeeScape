@@ -73,23 +73,14 @@ async function getPixelColor(event) {
     const x = event.offsetX;
     const y = event.offsetY;
 
-    // Account for canvas scaling
-    const devicePixelRatio = window.devicePixelRatio || 1;
-    const ctx = canvas.getContext('2d');
-    const backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
-        ctx.mozBackingStorePixelRatio ||
-        ctx.msBackingStorePixelRatio ||
-        ctx.oBackingStorePixelRatio ||
-        ctx.backingStorePixelRatio || 1;
-    const ratio = devicePixelRatio / backingStoreRatio;
-    const scaledX = x * ratio;
-    const scaledY = y * ratio;
+    console.log(`Clicked coordinates (unscaled): ${x}, ${y}`);
 
-    const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=${canvas.width}x${canvas.height}&maptype=roadmap&key=AIzaSyD8H08Wmk0JAuf8C91jD-oQOVDRuUkqDyk`;
+    const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=${canvas.width}x${canvas.height}&maptype=roadmap&key=YOUR_API_KEY`;
 
-    const color = await getClickedPixelColor(imageURL, scaledX, scaledY);
+    const color = await getClickedPixelColor(imageURL, x, y);
     console.log(`Clicked pixel color: rgba(${color.join(',')})`);
 }
+
 
 
 
@@ -116,14 +107,29 @@ async function getClickedPixelColor(imageURL, x, y) {
             const ctx = hiddenCanvas.getContext('2d');
             ctx.drawImage(img, 0, 0);
 
-            const imageData = ctx.getImageData(x, y, 1, 1).data;
+            // Account for canvas scaling
+            const devicePixelRatio = window.devicePixelRatio || 1;
+            const backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+                ctx.mozBackingStorePixelRatio ||
+                ctx.msBackingStorePixelRatio ||
+                ctx.oBackingStorePixelRatio ||
+                ctx.backingStorePixelRatio || 1;
+            const ratio = devicePixelRatio / backingStoreRatio;
+            const scaledX = x * ratio;
+            const scaledY = y * ratio;
+
+            console.log(`Clicked coordinates (scaled): ${scaledX}, ${scaledY}`);
+
+            const imageData = ctx.getImageData(scaledX, scaledY, 1, 1).data;
             resolve(imageData);
         };
+
         img.onerror = () => {
             reject('Error loading image');
         };
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
