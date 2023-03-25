@@ -1,10 +1,10 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
-var startX = 100;
+var startX = 600;
 var startY = 300;
 var endX = 700;
-var endY = 500;
+var endY = 200;
 
 var x = startX;
 var y = startY;
