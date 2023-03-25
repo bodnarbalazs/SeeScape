@@ -45,37 +45,30 @@ function animate() {
 }
 
 function animateCircle() {
-  var radius = 0;
-  var maxRadius = 50;
+  // Set the radius of the circle
+  var radius = 50;
 
-  function drawCircle() {
-    // Clear the canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Set the duration of the animation
+  var animationDuration = 50; // in milliseconds
 
-    // Set the global alpha value back to 1
-    ctx.globalAlpha = 1;
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw the half-circle
-    ctx.beginPath();
-    ctx.arc(endX, endY, radius, Math.PI, 2 * Math.PI);
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = 'white';
-    ctx.strokeStyle = 'white';
-    ctx.stroke();
+  // Set the global alpha value back to 1
+  ctx.globalAlpha = 1;
 
-    // Update the radius
-    radius += 1;
+  // Draw the half-circle
+  ctx.beginPath();
+  ctx.arc(endX, endY, radius, Math.PI, 2 * Math.PI);
+  ctx.shadowBlur = 10;
+  ctx.shadowColor = 'white';
+  ctx.strokeStyle = 'white';
+  ctx.stroke();
 
-    // Stop the animation when the circle has reached maximum radius
-    if (radius > maxRadius) {
-      console.log("Circle animation finished");
-      cancelAnimationFrame(circleAnimationId);
-    } else {
-      circleAnimationId = requestAnimationFrame(drawCircle);
-    }
-  }
-
-  var circleAnimationId = requestAnimationFrame(drawCircle);
+  // Wait for the animation duration to finish before stopping the animation
+  setTimeout(function() {
+    console.log("Circle animation finished");
+  }, animationDuration);
 }
 
 var animationId = requestAnimationFrame(animate);
