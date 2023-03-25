@@ -4,8 +4,8 @@ function initMap() {
     const mapOptions = {
         zoom: 9,
         center: new google.maps.LatLng(44.3404, -6.9745), // New York coordinates as an example
-        minZoom: 7,
-        maxZoom: 10,
+        minZoom: 9,
+        maxZoom: 13,
         restriction: {
             latLngBounds: {
                 north: 45,
