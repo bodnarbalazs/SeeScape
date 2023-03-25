@@ -3,6 +3,9 @@ var canvas;
 var ctx;
 
 function drawTextOnCanvas() {
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     // Define the text settings
     const text = "Place a Dronebase on the coast";
     const font = "5vw Arial";
@@ -39,12 +42,15 @@ async function initMap() {
                 mapElement.style.width = `${width}px`;
                 mapElement.style.height = `${height}px`;
                 google.maps.event.trigger(map, "resize");
+
+                canvas.width = canvas.clientWidth * ratio;
+                canvas.height = canvas.clientHeight * ratio;
+                ctx.scale(ratio, ratio);
+                drawTextOnCanvas();
             };
 
             window.addEventListener("resize", resizeMap);
             resizeMap();
-
-            drawTextOnCanvas();
 
             google.maps.event.addListener(map, "click", async function (event) {
                 const latitude = event.latLng.lat();
