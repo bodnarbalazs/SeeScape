@@ -1,4 +1,5 @@
 var map;
+var canvas;
 
 function initMap() {
     loadMapOptions()
@@ -23,7 +24,7 @@ function initMap() {
             resizeMap();
 
             // Add the transparent canvas overlay
-            const canvas = document.getElementById('myCanvas');
+            canvas = document.getElementById('myCanvas');
             canvas.addEventListener('click', getPixelColor, false);
 
             // Add click event listener to Google Maps instance
