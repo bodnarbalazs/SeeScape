@@ -99,4 +99,13 @@ async function getClickedPixelColor(imageURL, x, y) {
             const imageData = ctx.getImageData(x, y, 1, 1).data;
             resolve(imageData);
         };
+        img.onerror = () => {
+            reject('Error loading image');
+        };
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initMap();
+});
 
