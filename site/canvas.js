@@ -40,6 +40,17 @@ async function loadMapOptions() {
       const canvas = document.getElementById('myCanvas');
       const ctx = canvas.getContext('2d');
 
+      const devicePixelRatio = window.devicePixelRatio || 1;
+      const backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+                                 ctx.mozBackingStorePixelRatio ||
+                                 ctx.msBackingStorePixelRatio ||
+                                 ctx.oBackingStorePixelRatio ||
+                                 ctx.backingStorePixelRatio || 1;
+      const ratio = devicePixelRatio / backingStoreRatio;
+      canvas.width = canvas.clientWidth * ratio;
+      canvas.height = canvas.clientHeight * ratio;
+      ctx.scale(ratio, ratio);
+      
          // Define the text settings
       const text = 'Place a Dronebase on the coast';
       const x = canvas.width / 2; // center horizontally
