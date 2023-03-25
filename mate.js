@@ -31,8 +31,11 @@ function animate() {
   
     // Stop the animation when the line reaches the endpoint
     if (x == endX && y == endY) {
+      console.log("Vége öreg");
       cancelAnimationFrame(animationId);
+      
     } else {
+      console.log(y);
       animationId = requestAnimationFrame(animate);
     }
   }
