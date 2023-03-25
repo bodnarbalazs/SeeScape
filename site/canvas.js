@@ -94,6 +94,8 @@ canvas.width = canvas.clientWidth * ratio;
 canvas.height = canvas.clientHeight * ratio;
 ctx.scale(ratio, ratio);
 
+drawTextOnCanvas();
+
 // Add click event listener to the canvas
 canvas.addEventListener("click", async function (event) {
     const x = event.clientX;
