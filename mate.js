@@ -6,6 +6,9 @@ var startY = 100;
 var x=100;
 var y=100;
 
+var DiffX = (startX-endX)/200;
+var DiffY = (startY-endY)/200;
+
 var endX = 700;
 var endY = 500;
 
@@ -23,8 +26,8 @@ function animate() {
     ctx.stroke();
   
     // Update the starting point of the line
-    x += 1;
-    y += 1;
+    x += DiffX;
+    y += DiffY;
   
     // Stop the animation when the line reaches the endpoint
     if (x >= endX && y >= endY) {
