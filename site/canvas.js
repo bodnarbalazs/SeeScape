@@ -1,5 +1,23 @@
 var map;
+function drawTextOnCanvas() {
+    // Define the text settings
+    const text = "Place a Dronebase on the coast";
+    const font = "5vw Arial";
+    const color = "white";
+    const textAlign = "center";
+    const textBaseline = "middle";
 
+    // Calculate the x and y position to center the text
+    const x = canvas.width / 2;
+    const y = canvas.height / 2;
+
+    // Write the text to the canvas
+    ctx.fillStyle = color;
+    ctx.font = font;
+    ctx.textAlign = textAlign;
+    ctx.textBaseline = textBaseline;
+    ctx.fillText(text, x, y);
+}
 async function initMap() {
     loadMapOptions()
         .then((data) => {
@@ -21,6 +39,8 @@ async function initMap() {
 
             window.addEventListener("resize", resizeMap);
             resizeMap();
+
+            drawTextOnCanvas();
 
             google.maps.event.addListener(map, "click", async function (event) {
                 const latitude = event.latLng.lat();
