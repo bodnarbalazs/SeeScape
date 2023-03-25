@@ -39,3 +39,17 @@ async function loadMapOptions() {
       // Get the canvas element and context
       const canvas = document.getElementById('myCanvas');
       const ctx = canvas.getContext('2d');
+
+         // Define the text settings
+      const text = 'Place a Dronebase on the coast';
+      const x = canvas.width / 2; // center horizontally
+      const y = canvas.height / 2; // center vertically
+      const font = '24px Arial';
+      const color = 'white';
+      const textAlign = 'center';
+
+      // Write the text to the canvas
+      ctx.fillStyle = color;
+      ctx.font = font;
+      ctx.textAlign = textAlign;
+      ctx.fillText(text, x, y);
