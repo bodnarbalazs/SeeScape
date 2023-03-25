@@ -66,7 +66,7 @@ ctx.scale(ratio, ratio);
 
 // Define the text settings
 const text = "Place a Dronebase on the coast";
-const x = canvas.width / 6; // center horizontally
+const x = canvas.width / 6+10; // center horizontally
 const y = canvas.height / 20; // center vertically
 const font = "5vw Arial";
 const color = "white";
