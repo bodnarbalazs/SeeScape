@@ -2,7 +2,7 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var startX = 100;
-var startY = 100;
+var startY = 300;
 var x=100;
 var y=100;
 
@@ -10,7 +10,7 @@ var DiffX = (startX-endX)/200;
 var DiffY = (startY-endY)/200;
 
 var endX = 700;
-var endY = 500;
+var endY = 100;
 
 ctx.strokeStyle = '#adfc03';
 ctx.lineWidth = 2;
