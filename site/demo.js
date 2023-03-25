@@ -7,7 +7,7 @@ var startY = 100;
 var endX = 700;
 var endY = 500;
 
-ctx.strokeStyle = '#000';
+ctx.strokeStyle = '#adfc03';
 ctx.lineWidth = 2;
 
 function animate() {
