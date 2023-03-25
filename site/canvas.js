@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
-document.addEventListener('DOMContentLoaded', function () {
-    
+function initMap() {
+    canvas = document.getElementById('canvas');
     const mapOptions = {
         zoom: 8,
         center: new google.maps.LatLng(40.7128, -74.0060), // New York coordinates as an example
@@ -26,5 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const longitude = event.latLng.lng();
         console.log('Clicked coordinates:', latitude, longitude);
     });
-});
+}
+
 
