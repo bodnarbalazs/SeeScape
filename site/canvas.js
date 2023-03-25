@@ -37,7 +37,8 @@ async function loadMapOptions() {
 }
 
       // Get the canvas element and context
-      const canvas = document.getElementById('myCanvas');
+const canvas = document.getElementById('myCanvas');
+      canvas.addEventListener('click', getPixelColor, false);
       const ctx = canvas.getContext('2d');
 
       const devicePixelRatio = window.devicePixelRatio || 1;
@@ -77,3 +78,46 @@ async function loadMapOptions() {
           var color = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
           console.log(color);
       });
+async function getClickedPixelColor(imageURL, x, y) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = 'Anonymous';
+        img.src = imageURL;
+
+        img.onload = () => {
+            const hiddenCanvas = document.createElement('canvas');
+            hiddenCanvas.width = img.width;
+            hiddenCanvas.height = img.height;
+
+            const ctx = hiddenCanvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+
+            const imageData = ctx.getImageData(x, y, 1, 1).data;
+            resolve(imageData);
+        };
+
+        img.onerror = () => {
+            reject('Error loading image');
+        };
+    });
+}
+async function getPixelColor(event) {
+    const { lat, lng, zoom } = getMapInfo();
+    const x = event.clientX;
+    const y = event.clientY;
+
+    const imageURL = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=${zoom}&size=${canvas.width}x${canvas.height}&maptype=roadmap&key=AIzaSyD8H08Wmk0JAuf8C91jD-oQOVDRuUkqDyk`;
+
+    const color = await getClickedPixelColor(imageURL, x, y);
+    console.log(`Clicked pixel color: rgba(${color.join(',')})`);
+}
+
+function getMapInfo() {
+    const map = /* your Google Maps instance */;
+    const center = map.getCenter();
+    const lat = center.lat();
+    const lng = center.lng();
+    const zoom = map.getZoom();
+
+    return { lat, lng, zoom };
+}
