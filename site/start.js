@@ -1,3 +1,3 @@
 function demoClicked() {
-    location.replace("/site/start.html");
+    location.replace("/site/demo.html");
 }
