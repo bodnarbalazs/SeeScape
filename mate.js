@@ -8,6 +8,7 @@ var y=100;
 
 var DiffX = (startX-endX)/200;
 var DiffY = (startY-endY)/200;
+console.log(DiffX);
 
 var endX = 700;
 var endY = 500;
@@ -35,7 +36,6 @@ function animate() {
       cancelAnimationFrame(animationId);
       
     } else {
-      console.log(y);
       animationId = requestAnimationFrame(animate);
     }
   }
