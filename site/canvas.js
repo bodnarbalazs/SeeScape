@@ -64,3 +64,17 @@ async function loadMapOptions() {
       ctx.font = font;
       ctx.textAlign = textAlign;
       ctx.fillText(text, x, y);
+      
+      canvas.addEventListener('click', (event) => {
+        // Get the click coordinates relative to the canvas
+        const x = event.offsetX;
+        const y = event.offsetY;
+
+        // Set the fill color to red
+        ctx.fillStyle = 'red';
+
+        // Draw a red circle at the click coordinates
+        ctx.beginPath();
+        ctx.arc(x, y, 5, 0, 2 * Math.PI);
+        ctx.fill();
+      });
