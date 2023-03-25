@@ -1,4 +1,4 @@
-var canvas = document.getElementById('mycanvas');
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var startX = 100;
