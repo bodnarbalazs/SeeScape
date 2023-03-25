@@ -38,6 +38,7 @@ function animate() {
   if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
     console.log("Vége öreg");
     cancelAnimationFrame(animationId);
+    animateCircle();
   } else {
     animationId = requestAnimationFrame(animate);
   }
