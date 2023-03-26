@@ -125,27 +125,27 @@ if (startY > endY) {
 ctx.strokeStyle = '#fffff';
 ctx.lineWidth = 3;
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+// function animate() {
+//   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.beginPath();
-  ctx.moveTo(startX, startY);
-  ctx.lineTo(x, y);
-  ctx.shadowBlur = 10;
-  ctx.shadowColor = 'white';
-  ctx.strokeStyle = 'white';
-  ctx.stroke();
+//   ctx.beginPath();
+//   ctx.moveTo(startX, startY);
+//   ctx.lineTo(x, y);
+//   ctx.shadowBlur = 10;
+//   ctx.shadowColor = 'white';
+//   ctx.strokeStyle = 'white';
+//   ctx.stroke();
 
-  x += DiffX;
-  y += DiffY;
+//   x += DiffX;
+//   y += DiffY;
 
-  if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
-    //console.log("Vége öreg");
-  } else {
-    animationId = requestAnimationFrame(animate);
-  }
-}
-var animationId = requestAnimationFrame(animate);
+//   if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
+//     //console.log("Vége öreg");
+//   } else {
+//     animationId = requestAnimationFrame(animate);
+//   }
+// }
+// var animationId = requestAnimationFrame(animate);
 
 
 // animation
