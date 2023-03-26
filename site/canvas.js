@@ -18,10 +18,10 @@ function drawTextOnCanvas() {
     const y = canvas.height / 8;
 
     // Calculate the desired text width (80% of the canvas width)
-    const desiredWidth = canvas.width * 0.8;
+    const desiredWidth = canvas.width * 0.7;
 
     // Set an initial font size
-    let fontSize = 20;
+    let fontSize = 12;
     ctx.font = `${fontSize}px ${fontFamily}`;
 
     // Measure the text width with the current font size
