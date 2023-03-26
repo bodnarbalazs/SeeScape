@@ -131,6 +131,7 @@ nav h1{
     }
 }
 
+
 @keyframes droneAnimation2 {
     0% {
         transform: translateX(-300px) translateY(100%);
