@@ -152,14 +152,14 @@ var animationId = requestAnimationFrame(animate);
 
 count = 0;
 function place_loc(longitude, latitude, x, y){
-    console.log("kistök")
+    console.log("kistök");
     if (latitude<43.59) {
         if (count == 0){
             document.getElementById("droneBase").style.display = "block";
             document.getElementById("droneBase").style.top = y;
             document.getElementById("droneBase").style.left = x;
             count = 0;
-            console.log("tök")
+            console.log("tök");
         };
     }
     
