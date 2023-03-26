@@ -156,8 +156,8 @@ function place_loc(longitude, latitude, x, y){
     if (latitude<43.59) {
         if (count == 0){
             document.getElementById("droneBase").style.display = "block";
-            document.getElementById("droneBase").style.top = y+"px";
-            document.getElementById("droneBase").style.left = x+"px";
+            document.getElementById("droneBase").style.top = "900px";
+            document.getElementById("droneBase").style.left = "500px";
             count = 0;
             console.log("tök");
         };
