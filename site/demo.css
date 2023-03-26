@@ -50,5 +50,8 @@
 
 #droneTop{
     height: 100px;
+    position: absolute;
+    top: 900px;
+    left: 500px;
 }
 
