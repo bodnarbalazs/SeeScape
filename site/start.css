@@ -69,6 +69,7 @@ nav h1{
 }
 
 #Base{
+    position: absolute;
     width: 30;
     height: 30;
     border-radius: 15px;
