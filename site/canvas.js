@@ -251,6 +251,14 @@ function place_loc(longitude, latitude, x, y){
                 style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
                 document.head.appendChild(style);
             }, 3000);
+
+            setTimeout(function() {
+                document.getElementById("droneTop").style.display = "none";
+            }, 11500);
+
+            setTimeout(function() {
+                document.getElementById("policeBoat").style.display = "none";
+            }, 25000);
             
             setTimeout(function() {
                 document.getElementById("policeBoat").style.display = "block";
