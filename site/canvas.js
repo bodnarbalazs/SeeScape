@@ -201,7 +201,8 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneTop").style.top = basey + "px";
             document.getElementById("droneTop").style.left = basex + "px";
             const style = document.createElement('style');
-            style.innerHTML = "@keyframes my-animation { 49% {transform: rotate(0deg);} 50% {transform: rotate(180deg) translateX(" + x + "px) translateY("+y+"px);}100% {transform: translateX("+basex+"px) translateY("+basey+"px);}}";
+            console.log(basex, basey);
+            style.innerHTML = "@keyframes my-animation {0% {transform: translateX("+basex+"px) translateY("+basey+"px);} 49% {transform: rotate(0deg);} 50% {transform: rotate(180deg) translateX(" + x + "px) translateY("+y+"px);}100% {transform: translateX("+basex+"px) translateY("+basey+"px);}}";
             document.head.appendChild(style);
             
             
