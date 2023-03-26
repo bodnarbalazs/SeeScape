@@ -62,5 +62,18 @@
     animation-duration: 6s;
 }
 
-@keyframes my-animation {49% {transform: rotate(0deg);} 50% {rotate: (180deg);transform: translateX(500px) translateY(900px);}100% {    transform: translateX(500px) translateY(1600px);}}
+@keyframes my-animation {
+    0% {
+        transform: translateX(500px) translateY(1600px);
+    } 
+    49% {
+        transform: rotate(0deg);
+    } 
+    50% {
+        rotate: (180deg);transform: translateX(500px) translateY(900px);
+    }
+    100% {
+        transform: translateX(500px) translateY(1600px);
+    }
+}
 
