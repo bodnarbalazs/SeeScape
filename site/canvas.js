@@ -166,3 +166,4 @@ function place_loc(longitude, latitude, x, y){
 }
 
 
+document.addEventListener("click", place_loc (longitude, latitude, x, y))
