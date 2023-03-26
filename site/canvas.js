@@ -432,3 +432,20 @@ function boat3(){
 // document.head.appendChild(style);
 
 // document.addEventListener("click", place_loc (longitude, latitude, x, y))
+
+var markerLatlng = new google.maps.LatLng(43.55885355051079, -6.701934022213107);
+
+// Define the marker icon
+var markerIcon = {
+    url: 'https://maps.google.com/mapfiles/kml/shapes/target.png',
+    scaledSize: new google.maps.Size(30, 30),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(15, 15)
+};
+
+// Create the marker
+var marker = new google.maps.Marker({
+    position: markerLatlng,
+    icon: markerIcon,
+    map: map
+});
