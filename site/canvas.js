@@ -307,30 +307,42 @@ function deg2rad(deg) {
     return deg * (Math.PI/180)
 }
 
+b1 = 0
+b2 = 0
+b3 = 0
+
+
 function boat1(){
-    var basex = 541;
-    var basey = 1565;
-    var x = 121;
-    var y = 695;
-    document.getElementById("droneTop").style.display = "block";
-    document.getElementById("droneTop").classList.add('droneTop_animate');
-    document.getElementById("droneTop").style.top = basey + "px";
-    document.getElementById("droneTop").style.left = basex + "px";
-    const style = document.createElement('style');
-    console.log(basex, basey);
-    style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
-    document.head.appendChild(style);
 
-    setTimeout(function() {
-        document.getElementById("droneTop").classList.remove('droneTop_animate');
-        document.head.removeChild(style)
-    }, 8500);
+    if (b1 ==0){
+        var basex = 541;
+        var basey = 1565;
+        var x = 121;
+        var y = 695;
+        document.getElementById("droneTop").style.display = "block";
+        document.getElementById("droneTop").classList.add('droneTop_animate');
+        document.getElementById("droneTop").style.top = basey + "px";
+        document.getElementById("droneTop").style.left = basex + "px";
+        const style = document.createElement('style');
+        console.log(basex, basey);
+        style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+        document.head.appendChild(style);
 
-    setTimeout(function() {
-        const info = document.createElement('h2')
-        info.innerHTML = "IMO8364936 <br> Legal fishing"
-        document.getElementById("boatlable1").appendChild(info)
-    }, 4000);
+        setTimeout(function() {
+            document.getElementById("droneTop").classList.remove('droneTop_animate');
+            document.head.removeChild(style)
+        }, 8500);
+
+        
+
+        setTimeout(function() {
+            const info = document.createElement('h2')
+            info.innerHTML = "IMO8364936 <br> Legal fishing"
+            document.getElementById("boatlable1").appendChild(info)
+        }, 4000);
+        
+        b1 = 1;
+    }
     
 }
 
