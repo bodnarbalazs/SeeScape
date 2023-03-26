@@ -55,13 +55,13 @@ nav h1{
 
 #drone3{
     top:35%;
-    animation: droneAnimation3 1s linear 2;
+    animation: droneAnimation2 1s linear 2;
     animation-delay: 0.8s;
 }
 
 #drone4{
     top: 65%;
-    animation: droneAnimation4 1s linear 2;
+    animation: droneAnimation2 1s linear 2;
     animation-delay: 1.5s;
 }
 
@@ -130,30 +130,10 @@ nav h1{
 
 @keyframes droneAnimation2 {
     0% {
-        transform: translateX(-300px) translateY(100%) rotate(-0deg);
+        transform: translateX(-300px) translateY(100%);
     }
 
     100% {
-        transform: translateX(350%) translateY(100%) rotate(-0deg);
-    }
-}
-
-@keyframes droneAnimation3 {
-    0% {
-        transform: translateX(-300px) translateY(100%) rotate(-0deg);
-    }
-
-    100% {
-        transform: translateX(350%) translateY(100%) rotate(-0deg);
-    }
-}
-
-@keyframes droneAnimation4 {
-    0% {
-        transform: translateX(-300px) translateY(100%) rotate(-0deg);
-    }
-
-    100% {
-        transform: translateX(350%) translateY(100%) rotate(-0deg);
+        transform: translateX(350%) translateY(100%);
     }
 }
