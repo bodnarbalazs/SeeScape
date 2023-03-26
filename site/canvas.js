@@ -160,6 +160,7 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneBase").style.display = "block";
             document.getElementById("droneBase").style.top = y + "px";
             document.getElementById("droneBase").style.left = x + "px";
+            document.getElementById("instruction").innerHTML = "Choose a location for a boat on water!";
             console.log("tök");
             
             count += 1;
@@ -174,7 +175,7 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("boat").style.display = "block";
             document.getElementById("boat").style.top = y + "px";
             document.getElementById("boat").style.left = x + "px";
-            document.getElementById("instruction").innerHTML = "Choose a location for a boat on water!";
+            
 
             count = 2;
             console.log("count" + count);
