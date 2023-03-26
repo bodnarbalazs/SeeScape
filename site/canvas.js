@@ -187,7 +187,7 @@ function place_loc(longitude, latitude, x, y){
             Boatlongitude = longitude;
             Boatlatitude = latitude;
             
-            var distance = distance(Baselatitude,Baselongitude,Boatlatitude,Boatlongitude);
+            var distance = distance_func(Baselatitude,Baselongitude,Boatlatitude,Boatlongitude);
             document.getElementById("instruction").innerHTML = "The distance between the boat and the base: " + distance;
             count += 2;
             console.log("count" + count);
@@ -196,7 +196,7 @@ function place_loc(longitude, latitude, x, y){
     
 }
 
-function distance(Baselatitude, Baselongitude, Boatlatitude, Boatlongitude) {
+function distance_func(Baselatitude, Baselongitude, Boatlatitude, Boatlongitude) {
     const R = 6371; // Radius of the earth in km
     const dLat = deg2rad(Boatlatitude - Baselatitude);
     const dLon = deg2rad(Boatlongitude - Baselongitude); 
