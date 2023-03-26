@@ -43,7 +43,7 @@ async function initMap() {
                 const latitude = event.latLng.lat();
                 const longitude = event.latLng.lng();
                 console.log("Clicked coordinates:", latitude, longitude);
-                console.log("X és Y:", clientX,clienY );
+                console.log("X és Y:", event.clientX,event.clienY );
                 const land = await isLand(latitude, longitude);
                 console.log(land ? "Land" : "Water");
             });
