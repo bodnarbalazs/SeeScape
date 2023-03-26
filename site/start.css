@@ -68,6 +68,13 @@ nav h1{
     animation-delay: 1.5s;
 }
 
+#Base{
+    width: 30;
+    height: 30;
+    border-radius: 15px;
+    background-color: red;
+}
+
   
 /* @keyframes droneAnimation {
    
