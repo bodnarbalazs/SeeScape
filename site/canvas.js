@@ -5,42 +5,25 @@ var ctx;
 function drawTextOnCanvas() {
     // Clear the canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+    canvas = document.getElementById("myCanvas");
     // Define the text settings
     const text = "Place a Dronebase on the coast";
-    const fontFamily = "Arial";
+    const font = "Arial";
     const color = "white";
     const textAlign = "center";
     const textBaseline = "middle";
 
     // Calculate the x and y position to center the text
-    const x = canvas.width / 4;
+    const x = canvas.width / 6;
     const y = canvas.height / 8;
-
-    // Calculate the desired text width (80% of the canvas width)
-    const desiredWidth = canvas.width * 0.8;
-
-    // Set an initial font size
-    let fontSize = 12;
-    ctx.font = `${fontSize}px ${fontFamily}`;
-
-    // Measure the text width with the current font size
-    let textWidth = ctx.measureText(text).width;
-
-    // Increase or decrease the font size until the text width is close to the desired width
-    while (textWidth < desiredWidth * 0.95 || textWidth > desiredWidth * 1.05) {
-        fontSize = fontSize * (desiredWidth / textWidth);
-        ctx.font = `${fontSize}px ${fontFamily}`;
-        textWidth = ctx.measureText(text).width;
-    }
-
-    // Write the text to the canvas
     ctx.fillStyle = color;
+    ctx.font = font;
     ctx.textAlign = textAlign;
     ctx.textBaseline = textBaseline;
     ctx.fillText(text, x, y);
+    // Write the text to the canvas
+    
 }
-
 
 
 
