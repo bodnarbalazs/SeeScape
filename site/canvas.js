@@ -16,6 +16,11 @@ function drawTextOnCanvas() {
     // Calculate the x and y position to center the text
     const x = canvas.width / 4;
     const y = canvas.height / 8;
+    if (isMobile()) {
+        x = window.ClientRect.width / 4;
+        y = window.ClientRect.height / 8;
+    }
+    
 
     // Write the text to the canvas
     ctx.fillStyle = color;
@@ -24,6 +29,13 @@ function drawTextOnCanvas() {
     ctx.textBaseline = textBaseline;
     ctx.fillText(text, x, y);
 }
+function isMobile() {
+    const userAgent = window.navigator.userAgent;
+    const mobileKeywords = ["Android", "iPhone", "iPad", "iPod", "Windows Phone", "BlackBerry"];
+
+    return mobileKeywords.some((keyword) => userAgent.includes(keyword));
+}
+
 
 async function initMap() {
     loadMapOptions()
