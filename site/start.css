@@ -76,6 +76,7 @@ nav h1{
     background-color: red;
     top: 1565px;
     left: 541px;
+    z-index: 5;
 }
 
   
