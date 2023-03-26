@@ -164,7 +164,7 @@ function place_loc(longitude, latitude, x, y){
         };
     }
 
-    else{
+    if(latitude>43.59){
         if (count==1){
             document.getElementById("boat").style.display = "block";
             document.getElementById("boat").style.top = y + "px";
