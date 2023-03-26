@@ -324,13 +324,13 @@ function boat1(){
 
 
 
-document.getElementById("policeBoat").style.display = "block";
-document.getElementById("policeBoat").classList.add('policeboat_animate');
-document.getElementById("policeBoat").style.top = basey + "px";
-document.getElementById("policeBoat").style.left = basex + "px";
-const style = document.createElement('style');
-console.log(basex, basey);
-style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
-document.head.appendChild(style);
+// document.getElementById("policeBoat").style.display = "block";
+// document.getElementById("policeBoat").classList.add('policeboat_animate');
+// document.getElementById("policeBoat").style.top = basey + "px";
+// document.getElementById("policeBoat").style.left = basex + "px";
+// const style = document.createElement('style');
+// console.log(basex, basey);
+// style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+// document.head.appendChild(style);
 
 // document.addEventListener("click", place_loc (longitude, latitude, x, y))
