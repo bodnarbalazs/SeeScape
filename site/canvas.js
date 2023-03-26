@@ -460,7 +460,7 @@ function boat3(){
         }, 5000);
 
         setTimeout(function() {
-            document.getElementById("policeBoat").classList.remove('policeBoat_animate');
+            document.getElementById("policeBoat2").classList.remove('policeBoat_animate');
             document.head.removeChild(styleb);
         }, 17000);
 
