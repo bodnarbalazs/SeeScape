@@ -22,7 +22,6 @@ function drawTextOnCanvas() {
 
     // Set an initial font size and maximum font size
     let fontSize = 12;
-    const maxFontSize = 36;
     ctx.font = `${fontSize}px ${fontFamily}`;
 
     // Measure the text width with the current font size
