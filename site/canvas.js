@@ -17,19 +17,8 @@ function drawTextOnCanvas() {
     const x = canvas.width / 4;
     const y = canvas.height / 8;
     if (isMobile()) {
-        x = 0;
-        y = 0;
-        ctx.fillStyle = color;
-        ctx.font = font;
-        ctx.textAlign = textAlign;
-        ctx.textBaseline = textBaseline;
-        ctx.fillText(text, x, y);
+        alert("go?");
     }
-    ctx.fillStyle = color;
-    ctx.font = font;
-    ctx.textAlign = textAlign;
-    ctx.textBaseline = textBaseline;
-    ctx.fillText(text, x, y);
 
     // Write the text to the canvas
     
