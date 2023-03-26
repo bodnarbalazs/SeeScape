@@ -325,6 +325,13 @@ function boat1(){
         document.getElementById("droneTop").classList.remove('droneTop_animate');
         document.head.removeChild(style)
     }, 8500);
+
+    setTimeout(function() {
+        const info = document.createElement('h2')
+        info.innerHTML = "IMO8364936 <br> Legal fishing"
+        document.getElementById("boatlable1").innerText.appendChild(info)
+    }, 4000);
+    
 }
 
 function boat2(){
