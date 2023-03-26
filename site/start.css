@@ -4,7 +4,9 @@ nav{
     justify-content: center;
     align-items: center;
 }
-
+body{
+    width: 100vw;
+}
 nav h1{
     font-size: 100px;
 }
