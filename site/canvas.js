@@ -19,7 +19,11 @@ function drawTextOnCanvas() {
     if (isMobile()) {
         alert("go?");
     }
-
+    ctx.fillStyle = color;
+    ctx.font = font;
+    ctx.textAlign = textAlign;
+    ctx.textBaseline = textBaseline;
+    ctx.fillText(text, x, y);
     // Write the text to the canvas
     
 }
