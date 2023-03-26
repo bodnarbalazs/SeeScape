@@ -395,6 +395,23 @@ function boat2(){
                     activeb = 0;
                 }, 21000);
             }
+            // else{
+            //     setTimeout(function() {
+            //         activeb = 1;
+            //         document.getElementById("policeBoat").style.display = "block";
+            //         document.getElementById("policeBoat").classList.add('policeboat_animate');
+            //         document.getElementById("policeBoat").style.top = basey2 + "px";
+            //         document.getElementById("policeBoat").style.left = basex2 + "px";
+            //         const styleb = document.createElement('style');
+            //         console.log(basex2, basey2);
+            //         styleb.innerHTML = "@keyframes my-animation2 {0% {top: " + basey2 + "px; left: "+basex2+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y2 + "px; left: "+x2+"px; transform: rotate(180deg);} 100% {top: " + basey2 + "px; left: "+basex2+"px; transform: rotate(180deg);}}";
+            //         document.head.appendChild(styleb);
+
+            //         setTimeout(function() {
+            //             activeb = 0;
+            //         }, 21000);
+            //     }, 13000);
+            // }
            
         }, 5000);
 
@@ -442,7 +459,7 @@ function boat3(){
         }, 4000);
 
         setTimeout(function() {
-            if (activeb == 0 && b3 ==0){
+            if (activeb == 0){
                 activeb = 1;
                 document.getElementById("policeBoat").style.display = "block";
                 document.getElementById("policeBoat").classList.add('policeboat_animate');
