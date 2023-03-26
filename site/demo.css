@@ -51,8 +51,16 @@
 #droneTop{
     height: 100px;
     position: absolute;
+    display: none;
     top: 900px;
     left: 500px;
     z-index: 50;
 }
+
+.droneTop_animate{
+    animation-name: my-animation;
+    animation-duration: 6s;
+}
+
+
 
