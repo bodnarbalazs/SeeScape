@@ -192,6 +192,7 @@ function place_loc(longitude, latitude, x, y){
             Boatlatitude = latitude;
             
             var distance = distance_func(Baselatitude,Baselongitude,Boatlatitude,Boatlongitude);
+            distance = distance.toFixed(2)
             document.getElementById("instruction").innerHTML = "The distance between the boat and the base: " + distance + "km";
             count += 2;
             console.log("count" + count);
