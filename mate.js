@@ -76,6 +76,4 @@ function animate(current) {
   }
 }
 
-animate();
-
 var animationId = requestAnimationFrame(animate);
