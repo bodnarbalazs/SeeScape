@@ -472,7 +472,7 @@ function boat3(){
 
                 setTimeout(function() {
                     activeb = 0;
-                }, 21000);
+                }, 17000);
             }
             else{
                 setTimeout(function() {
@@ -488,15 +488,15 @@ function boat3(){
 
                     setTimeout(function() {
                         activeb = 0;
-                    }, 21000);
-                }, 13000);
+                    }, 17000);
+                }, 9000);
             }
         }, 5000);
 
         setTimeout(function() {
             document.getElementById("policeBoat").classList.remove('policeBoat_animate');
             document.head.removeChild(styleb);
-        }, 21000);
+        }, 17000);
 
         setTimeout(function() {
             active = 0;
