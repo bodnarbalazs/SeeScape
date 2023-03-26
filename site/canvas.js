@@ -392,8 +392,8 @@ function boat2(){
                 document.head.appendChild(styleb);
 
                 setTimeout(function() {
-                    active = 0;
-                }, 16000);
+                    activeb = 0;
+                }, 21000);
             }
            
         }, 5000);
@@ -454,8 +454,8 @@ function boat3(){
                 document.head.appendChild(styleb);
 
                 setTimeout(function() {
-                    active = 0;
-                }, 16000);
+                    activeb = 0;
+                }, 21000);
             }
         }, 5000);
 
