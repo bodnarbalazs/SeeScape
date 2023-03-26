@@ -2,6 +2,9 @@ var map;
 var canvas;
 var ctx;
 
+var longitude = ""
+var latitude = ""
+
 function displayText(text) {
     var textElement = document.createElement("h1");
 
@@ -40,8 +43,8 @@ async function initMap() {
             resizeMap();
             displayText("Place a drone base on the coast");
             google.maps.event.addListener(map, "click", async function (event) {
-                const latitude = event.latLng.lat();
-                const longitude = event.latLng.lng();
+                latitude = event.latLng.lat();
+                longitude = event.latLng.lng();
                 console.log("Clicked coordinates:", latitude, longitude);
                 const land = await isLand(latitude, longitude);
                 console.log(land ? "Land" : "Water");
@@ -50,6 +53,7 @@ async function initMap() {
         })
         .catch((error) => console.error("Error fetching map options:", error));
 }
+
 document.addEventListener("click", function (event) {
     const x = event.clientX;
     const y = event.clientY;
@@ -58,6 +62,7 @@ document.addEventListener("click", function (event) {
 
     simulation.place_loc(longitude, latitude, x, y)
 });
+
 async function loadMapOptions() {
     const response = await fetch("assets/mapOptions.json");
     const data = await response.json();

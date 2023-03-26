@@ -4,6 +4,7 @@ setTimeout(() => {
 
 count = 0;
 function place_loc(longitude, latitude, x, y){
+    console.log("kistök")
     if (latitude<43.59) {
         if (count == 0){
             document.getElementById("droneBase").style.display = "block";
