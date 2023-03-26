@@ -19,16 +19,20 @@ function drawTextOnCanvas() {
     if (isMobile()) {
         x = 0;
         y = 0;
-        alert("ffuuuck");
+        ctx.fillStyle = color;
+        ctx.font = font;
+        ctx.textAlign = textAlign;
+        ctx.textBaseline = textBaseline;
+        ctx.fillText(text, x, y);
     }
-    
-
-    // Write the text to the canvas
     ctx.fillStyle = color;
     ctx.font = font;
     ctx.textAlign = textAlign;
     ctx.textBaseline = textBaseline;
     ctx.fillText(text, x, y);
+
+    // Write the text to the canvas
+    
 }
 function isMobile() {
     const userAgent = window.navigator.userAgent;
