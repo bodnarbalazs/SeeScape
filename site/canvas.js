@@ -380,7 +380,7 @@ function boat2(){
 
 
         setTimeout(function() {
-            if (activeb == 0){
+            // if (activeb == 0){
                 activeb = 1;
                 document.getElementById("policeBoat").style.display = "block";
                 document.getElementById("policeBoat").classList.add('policeboat_animate');
@@ -394,7 +394,7 @@ function boat2(){
                 setTimeout(function() {
                     activeb = 0;
                 }, 21000);
-            }
+            // }
            
         }, 5000);
 
@@ -442,7 +442,7 @@ function boat3(){
         }, 4000);
 
         setTimeout(function() {
-            if (activeb == 0){
+            // if (activeb == 0){
                 activeb = 1;
                 document.getElementById("policeBoat2").style.display = "block";
                 document.getElementById("policeBoat2").classList.add('policeboat_animate');
@@ -456,7 +456,7 @@ function boat3(){
                 setTimeout(function() {
                     activeb = 0;
                 }, 17000);
-            }
+            // }
         }, 5000);
 
         setTimeout(function() {
