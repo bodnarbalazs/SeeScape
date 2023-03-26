@@ -329,7 +329,7 @@ function boat1(){
     setTimeout(function() {
         const info = document.createElement('h2')
         info.innerHTML = "IMO8364936 <br> Legal fishing"
-        document.getElementById("boatlable1").innerText.appendChild(info)
+        document.getElementById("boatlable1").appendChild(info)
     }, 4000);
     
 }
