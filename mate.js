@@ -1,3 +1,9 @@
+(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -38,37 +44,38 @@ function animate() {
   if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
     console.log("Vége öreg");
     cancelAnimationFrame(animationId);
-    animateCircle();
+    animate();
   } else {
     animationId = requestAnimationFrame(animate);
   }
 }
+var radius = 75;
+var endPercent = 45;
+var curPerc = 0;
+var counterClockwise = false;
+var circ = Math.PI * 2;
+var quart = Math.PI / 2;
 
-function animateCircle() {
-  // Set the radius of the circle
-  var radius = 50;
+context.lineWidth = 10;
+context.strokeStyle = '#white';
+context.shadowOffsetX = 0;
+context.shadowOffsetY = 0;
+context.shadowBlur = 10;
+context.shadowColor = '#white';
 
-  // Set the duration of the animation
-  var animationDuration = 50; // in milliseconds
-
-  // Clear the canvas
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Set the global alpha value back to 1
-  ctx.globalAlpha = 1;
-
-  // Draw the half-circle
-  ctx.beginPath();
-  ctx.arc(endX, endY, radius, Math.PI, 2 * Math.PI);
-  ctx.shadowBlur = 10;
-  ctx.shadowColor = 'white';
-  ctx.strokeStyle = 'white';
-  ctx.stroke();
-
-  // Wait for the animation duration to finish before stopping the animation
-  setTimeout(function() {
-    console.log("Circle animation finished");
-  }, animationDuration);
+function animate(current) {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.beginPath();
+  context.arc(endX, endY, radius, -(quart), ((circ) * current) - quart, false);
+  context.stroke();
+  curPerc++;
+  if (curPerc < endPercent) {
+      requestAnimationFrame(function () {
+          animate(curPerc / 100)
+      });
+  }
 }
+
+animate();
 
 var animationId = requestAnimationFrame(animate);
