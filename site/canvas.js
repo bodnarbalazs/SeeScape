@@ -3,7 +3,7 @@ var canvas;
 var ctx;
 
 var longitude = ""
-var latitude = ""
+var latitude = 50
 
 function displayText(text) {
     var textElement = document.createElement("h1");
@@ -161,9 +161,9 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneBase").style.top = y + "px";
             document.getElementById("droneBase").style.left = x + "px";
             console.log("tök");
-            if (x != ""){
-                count += 1;
-            }
+            
+            count += 1;
+            
             
             console.log("count" + count);
         };
