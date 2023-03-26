@@ -106,6 +106,7 @@ body{
 
 .boatimg{
     height: 60px;
+    position: absolute;
 }
 
 #Boat1{
