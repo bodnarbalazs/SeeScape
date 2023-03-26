@@ -205,6 +205,10 @@ function place_loc(longitude, latitude, x, y){
             console.log(basex, basey);
             style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
             document.head.appendChild(style);
+
+            setTimeout(function() {
+                document.getElementById("instruction").innerHTML = "You found a pirate!";
+              }, 1000);
             
             
         }   
