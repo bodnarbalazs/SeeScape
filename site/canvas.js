@@ -154,7 +154,7 @@ var count = 0;
 function place_loc(longitude, latitude, x, y){
     console.log("kistök");
     if (latitude<43.59) {
-        if (count == 0){
+        if (count == 1){
             document.getElementById("droneBase").style.display = "block";
             document.getElementById("droneBase").style.top = y + "px";
             document.getElementById("droneBase").style.left = x + "px";
@@ -165,7 +165,7 @@ function place_loc(longitude, latitude, x, y){
     }
 
     if(latitude>43.59){
-        if (count==1){
+        if (count==2){
             document.getElementById("boat").style.display = "block";
             document.getElementById("boat").style.top = y + "px";
             document.getElementById("boat").style.left = x + "px";
