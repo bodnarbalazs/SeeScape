@@ -199,47 +199,47 @@ function place_loc(longitude, latitude, x, y){
             console.log("count" + count);
 
             // dotted line
-            var startX = basex+15;
-            var startY = basey;
-            var endX = x+15;
-            var endY = y;
+            // var startX = basex+15;
+            // var startY = basey;
+            // var endX = x+15;
+            // var endY = y;
 
-            var lx = startX;
-            var ly = startY;
-            var DiffX = Math.abs(endX - startX) / 100;
-            var DiffY = Math.abs(endY - startY) / 100;
+            // var lx = startX;
+            // var ly = startY;
+            // var DiffX = Math.abs(endX - startX) / 100;
+            // var DiffY = Math.abs(endY - startY) / 100;
 
-            if (startX > endX) {
-            DiffX = -DiffX;
-            }
-            if (startY > endY) {
-            DiffY = -DiffY;
-            }
+            // if (startX > endX) {
+            // DiffX = -DiffX;
+            // }
+            // if (startY > endY) {
+            // DiffY = -DiffY;
+            // }
 
-            ctx.strokeStyle = '#fffff';
-            ctx.lineWidth = 3;
+            // ctx.strokeStyle = '#fffff';
+            // ctx.lineWidth = 3;
 
-            function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // function animate() {
+            // ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            ctx.beginPath();
-            ctx.moveTo(startX, startY);
-            ctx.lineTo(lx, ly);
-            ctx.shadowBlur = 10;
-            ctx.shadowColor = 'white';
-            ctx.strokeStyle = 'white';
-            ctx.stroke();
+            // ctx.beginPath();
+            // ctx.moveTo(startX, startY);
+            // ctx.lineTo(lx, ly);
+            // ctx.shadowBlur = 10;
+            // ctx.shadowColor = 'white';
+            // ctx.strokeStyle = 'white';
+            // ctx.stroke();
 
-            lx += DiffX;
-            ly += DiffY;
+            // lx += DiffX;
+            // ly += DiffY;
 
-            if ((DiffX > 0 && lx > endX) || (DiffX < 0 && lx < endX) || (DiffY > 0 && ly > endY) || (DiffY < 0 && ly < endY)) {
-                //console.log("Vége öreg");
-            } else {
-                animationId = requestAnimationFrame(animate);
-            }
-            }
-            var animationId = requestAnimationFrame(animate);
+            // if ((DiffX > 0 && lx > endX) || (DiffX < 0 && lx < endX) || (DiffY > 0 && ly > endY) || (DiffY < 0 && ly < endY)) {
+            //     //console.log("Vége öreg");
+            // } else {
+            //     animationId = requestAnimationFrame(animate);
+            // }
+            // }
+            // var animationId = requestAnimationFrame(animate);
             // dotted line
             setTimeout(function() {
                 document.getElementById("droneTop").style.display = "block";
