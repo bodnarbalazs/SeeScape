@@ -388,7 +388,7 @@ function boat2(){
                 document.getElementById("policeBoat").style.left = basex2 + "px";
                 const styleb = document.createElement('style');
                 console.log(basex2, basey2);
-                styleb.innerHTML = "@keyframes my-animation {0% {top: " + basey2 + "px; left: "+basex2+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y2 + "px; left: "+x2+"px; transform: rotate(180deg);} 100% {top: " + basey2 + "px; left: "+basex2+"px; transform: rotate(180deg);}}";
+                styleb.innerHTML = "@keyframes my-animation2 {0% {top: " + basey2 + "px; left: "+basex2+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y2 + "px; left: "+x2+"px; transform: rotate(180deg);} 100% {top: " + basey2 + "px; left: "+basex2+"px; transform: rotate(180deg);}}";
                 document.head.appendChild(styleb);
 
                 setTimeout(function() {
@@ -450,7 +450,7 @@ function boat3(){
                 document.getElementById("policeBoat").style.left = basex + "px";
                 const styleb = document.createElement('style');
                 console.log(basex, basey);
-                styleb.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+                styleb.innerHTML = "@keyframes my-animation2 {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
                 document.head.appendChild(styleb);
 
                 setTimeout(function() {
