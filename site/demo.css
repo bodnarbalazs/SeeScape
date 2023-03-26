@@ -136,9 +136,11 @@ body{
 
 .boatlable{
     font-size: 15px;
+
 }
 
 #boatlable1{
+    position: absolute;
     left:200px;
     top:677px;
 }
