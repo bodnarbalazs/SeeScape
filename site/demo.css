@@ -19,6 +19,8 @@ body{
 #content{
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 #myCanvas {
     position: absolute;
