@@ -187,7 +187,7 @@ function place_loc(longitude, latitude, x, y){
             Boatlongitude = longitude;
             Boatlatitude = latitude;
             
-            var distance = distance(Baselongitude,Baselatitude,Boatlongitude,Boatlatitude);
+            var distance = distance(Baselatitude,Baselongitude,Boatlatitude,Boatlongitude);
             document.getElementById("instruction").innerHTML = "The distance between the boat and the base: " + distance;
             count += 2;
             console.log("count" + count);
