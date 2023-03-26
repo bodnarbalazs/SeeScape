@@ -250,15 +250,15 @@ function place_loc(longitude, latitude, x, y){
                 console.log(basex, basey);
                 style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
                 document.head.appendChild(style);
-            }, 3000);
+            }, 1000);
 
             setTimeout(function() {
                 document.getElementById("droneTop").style.display = "none";
-            }, 11500);
+            }, 9500);
 
             setTimeout(function() {
                 document.getElementById("policeBoat").style.display = "none";
-            }, 23000);
+            }, 21000);
             
             setTimeout(function() {
                 document.getElementById("policeBoat").style.display = "block";
@@ -269,7 +269,7 @@ function place_loc(longitude, latitude, x, y){
                 console.log(basex, basey);
                 style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
                 document.head.appendChild(style);
-            }, 7000);
+            }, 5000);
 
             const list = ["You found a pirate!", "You found a drug smuggler!", "You found a boat full of exiles!", "You fund an illegal fisherman!"];
             const randomIndex = Math.floor(Math.random() * list.length);
@@ -277,7 +277,7 @@ function place_loc(longitude, latitude, x, y){
 
             setTimeout(function() {
                 document.getElementById("instruction").innerHTML = randomElement;
-              }, 7000);
+              }, 5000);
             
             
         }   
