@@ -55,6 +55,8 @@ document.addEventListener("click", function (event) {
     const y = event.clientY;
 
     console.log("X és Y:", x, y);
+
+    place_loc(longitude, latitude, x, y)
 });
 async function loadMapOptions() {
     const response = await fetch("assets/mapOptions.json");
