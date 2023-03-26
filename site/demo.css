@@ -125,9 +125,9 @@ body{
 
 #Base{
     position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
     background-color: red;
     top: 1565px;
     left: 541px;
