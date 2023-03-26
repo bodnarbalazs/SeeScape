@@ -317,7 +317,7 @@ function boat1(){
     if (b1 ==0 && active == 0){
         active = 1;
         var basex = 541;
-        var basey = 1565;
+        var basey = 1670;
         var x = 121;
         var y = 695;
         document.getElementById("droneTop").style.display = "block";
@@ -353,21 +353,21 @@ function boat2(){
     if (b2 ==0 && active == 0){
         active = 1;
         var basex = 541;
-        var basey = 1565;
+        var basey = 1670;
         var x = 477;
         var y = 510;
         document.getElementById("droneTop").style.display = "block";
         document.getElementById("droneTop").classList.add('droneTop_animate');
         document.getElementById("droneTop").style.top = basey + "px";
         document.getElementById("droneTop").style.left = basex + "px";
-        const style = document.createElement('style');
+        const styled = document.createElement('style');
         console.log(basex, basey);
-        style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
-        document.head.appendChild(style);
+        styled.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+        document.head.appendChild(styled);
 
         setTimeout(function() {
             document.getElementById("droneTop").classList.remove('droneTop_animate');
-            document.head.removeChild(style)
+            document.head.removeChild(styled)
         }, 8000);
 
         setTimeout(function() {
@@ -376,6 +376,24 @@ function boat2(){
             info.innerHTML = "IMO234945 <br> Dumping oil"
             document.getElementById("boatlable2").appendChild(info)
         }, 4000);
+
+
+        setTimeout(function() {
+            document.getElementById("policeBoat").style.display = "block";
+            document.getElementById("policeBoat").classList.add('policeboat_animate');
+            document.getElementById("policeBoat").style.top = basey + "px";
+            document.getElementById("policeBoat").style.left = basex + "px";
+            const styleb = document.createElement('style');
+            console.log(basex, basey);
+            styleb.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+            document.head.appendChild(styleb);
+        }, 5000);
+
+        setTimeout(function() {
+            document.getElementById("policeBoat").classList.remove('policeBoat_animate');
+            document.head.removeChild(styleb);
+        }, 21000);
+
 
         setTimeout(function() {
             active = 0;
@@ -390,7 +408,7 @@ function boat3(){
     if (b3 ==0 && active == 0){
         active = 1;
         var basex = 541;
-        var basey = 1565;
+        var basey = 1670;
         var x = 720;
         var y = 870;
         document.getElementById("droneTop").style.display = "block";
