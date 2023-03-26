@@ -350,7 +350,7 @@ function boat1(){
 }
 
 function boat2(){
-    if (b1 ==0 && active == 0){
+    if (b2 ==0 && active == 0){
         active = 1;
         var basex = 541;
         var basey = 1565;
@@ -386,7 +386,7 @@ function boat2(){
 }
 
 function boat3(){
-    if (b1 ==0 && active == 0){
+    if (b3 ==0 && active == 0){
         active = 1;
         var basex = 541;
         var basey = 1565;
