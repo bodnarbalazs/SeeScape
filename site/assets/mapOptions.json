@@ -1,13 +1,13 @@
 {
   "mapOptions": {
-    "zoom": 11,
+    "zoom": 10,
     "center": {
       "lat": 43.77128,
       "lng": -74.0060
     },
     "disableDefaultUI": true,
-    "minZoom": 11,
-    "maxZoom": 11,
+    "minZoom": 10,
+    "maxZoom": 10,
     "restriction": {
       "latLngBounds": {
         "north": 44.21695723190636 ,
