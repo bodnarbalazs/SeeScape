@@ -197,6 +197,8 @@ function place_loc(longitude, latitude, x, y){
             count += 2;
             console.log("count" + count);
 
+            animate(basex,basey,x,y)
+
             document.getElementById("droneTop").style.display = "block";
             document.getElementById("droneTop").classList.add('droneTop_animate');
             document.getElementById("droneTop").style.top = basey + "px";
