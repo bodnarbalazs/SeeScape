@@ -43,25 +43,25 @@ nav h1{
 }
 
 #drone1{
-    animation: droneAnimation 3s linear infinite;
+    animation: droneAnimation 3s linear 1;
     top: 80%;
-    animation-delay: 5s;
+    animation-delay: 2s;
 }
 
 #drone2{
     top:0%;
-    animation: droneAnimation2 1s linear infinite;
+    animation: droneAnimation2 1s linear 2;
 }
 
 #drone3{
     top:35%;
-    animation: droneAnimation3 1s linear infinite;
+    animation: droneAnimation3 1s linear 2;
     animation-delay: 0.8s;
 }
 
 #drone4{
     top: 65%;
-    animation: droneAnimation4 1s linear infinite;
+    animation: droneAnimation4 1s linear 2;
     animation-delay: 1.5s;
 }
 
