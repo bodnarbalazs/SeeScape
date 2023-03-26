@@ -56,7 +56,6 @@ var counterClockwise = false;
 var circ = Math.PI * 2;
 var quart = Math.PI / 2;
 
-context.lineWidth = 10;
 context.strokeStyle = '#white';
 context.shadowOffsetX = 0;
 context.shadowOffsetY = 0;
