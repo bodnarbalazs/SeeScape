@@ -169,6 +169,8 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("boat").style.display = "block";
             document.getElementById("boat").style.top = y + "px";
             document.getElementById("boat").style.left = x + "px";
+
+            count += 1;
         }
     }
     
