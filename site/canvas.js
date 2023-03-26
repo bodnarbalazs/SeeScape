@@ -378,7 +378,7 @@ function boat2(){
             document.getElementById("boatlable2").appendChild(info)
         }, 4000);
 
-
+        
         setTimeout(function() {
             if (activeb == 0){
                 activeb = 1;
