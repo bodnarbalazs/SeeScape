@@ -372,7 +372,7 @@ function boat2(){
 
         setTimeout(function() {
             const info = document.createElement('h2')
-            info.innerHTML = "IMO234945 <br> Wrong GPS data"
+            info.innerHTML = "IMO234945 <br> Dumping oil"
             document.getElementById("boatlable2").appendChild(info)
         }, 4000);
 
