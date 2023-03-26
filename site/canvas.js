@@ -158,9 +158,18 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneBase").style.display = "block";
             document.getElementById("droneBase").style.top = y + "px";
             document.getElementById("droneBase").style.left = x + "px";
-            count = 0;
             console.log("tök");
+
+            count += 1;
         };
+    }
+
+    else{
+        if (count==1){
+            document.getElementById("boat").style.display = "block";
+            document.getElementById("boat").style.top = y + "px";
+            document.getElementById("boat").style.left = x + "px";
+        }
     }
     
 }
