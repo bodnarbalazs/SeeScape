@@ -16,9 +16,6 @@ function drawTextOnCanvas() {
     // Calculate the x and y position to center the text
     const x = canvas.width / 4;
     const y = canvas.height / 8;
-    if (isMobile()) {
-        color = "red";
-    }
     ctx.fillStyle = color;
     ctx.font = font;
     ctx.textAlign = textAlign;
@@ -27,12 +24,7 @@ function drawTextOnCanvas() {
     // Write the text to the canvas
     
 }
-function isMobile() {
-    const userAgent = window.navigator.userAgent;
-    const mobileKeywords = ["Android", "iPhone", "iPad", "iPod", "Windows Phone", "BlackBerry"];
 
-    return mobileKeywords.some((keyword) => userAgent.includes(keyword));
-}
 
 
 async function initMap() {
