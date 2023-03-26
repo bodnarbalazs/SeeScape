@@ -233,7 +233,7 @@ function place_loc(longitude, latitude, x, y){
             lx += DiffX;
             ly += DiffY;
 
-            if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
+            if ((DiffX > 0 && lx > endX) || (DiffX < 0 && lx < endX) || (DiffY > 0 && ly > endY) || (DiffY < 0 && ly < endY)) {
                 //console.log("Vége öreg");
             } else {
                 animationId = requestAnimationFrame(animate);
