@@ -17,7 +17,8 @@ function drawTextOnCanvas() {
     const x = canvas.width / 4;
     const y = canvas.height / 8;
     if (isMobile()) {
-        alert("go?");
+        x = 10;
+        y = 10;
     }
     ctx.fillStyle = color;
     ctx.font = font;
