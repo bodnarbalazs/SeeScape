@@ -208,7 +208,7 @@ function place_loc(longitude, latitude, x, y){
 
             setTimeout(function() {
                 document.getElementById("instruction").innerHTML = "You found a pirate!";
-              }, 1000);
+              }, 5000);
             
             
         }   
