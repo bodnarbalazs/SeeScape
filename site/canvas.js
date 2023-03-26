@@ -320,6 +320,11 @@ function boat1(){
     console.log(basex, basey);
     style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
     document.head.appendChild(style);
+
+    setTimeout(function() {
+        document.getElementById("droneTop").classList.remove('droneTop_animate');
+        document.head.removeChild(style)
+    }, 8500);
 }
 
 function boat2(){
@@ -335,6 +340,12 @@ function boat2(){
     console.log(basex, basey);
     style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
     document.head.appendChild(style);
+
+    setTimeout(function() {
+        document.getElementById("droneTop").classList.remove('droneTop_animate');
+        document.head.removeChild(style)
+    }, 8500);
+    
 }
 
 function boat3(){
@@ -350,6 +361,11 @@ function boat3(){
     console.log(basex, basey);
     style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
     document.head.appendChild(style);
+
+    setTimeout(function() {
+        document.getElementById("droneTop").classList.remove('droneTop_animate');
+        document.head.removeChild(style)
+    }, 8500);
 }
 
 
