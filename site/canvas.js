@@ -397,7 +397,7 @@ function boat2(){
                 }, 15000);
             // }
            
-        }, 5000);
+        }, 3000);
 
         setTimeout(function() {
             document.getElementById("policeBoat").classList.remove('policeBoat_animate');
