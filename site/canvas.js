@@ -199,9 +199,9 @@ function place_loc(longitude, latitude, x, y){
             console.log("count" + count);
 
             // dotted line
-            var startX = basex;
+            var startX = basex+15;
             var startY = basey;
-            var endX = x;
+            var endX = x+15;
             var endY = y;
 
             var lx = startX;
