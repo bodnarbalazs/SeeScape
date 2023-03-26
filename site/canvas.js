@@ -20,7 +20,7 @@ function drawTextOnCanvas() {
     // Calculate the desired text width (80% of the canvas width)
     const desiredWidth = canvas.width * 0.8;
 
-    // Set an initial font size and maximum font size
+    // Set an initial font size
     let fontSize = 12;
     ctx.font = `${fontSize}px ${fontFamily}`;
 
@@ -30,7 +30,6 @@ function drawTextOnCanvas() {
     // Increase or decrease the font size until the text width is close to the desired width
     while (textWidth < desiredWidth * 0.95 || textWidth > desiredWidth * 1.05) {
         fontSize = fontSize * (desiredWidth / textWidth);
-        fontSize = Math.min(fontSize, maxFontSize);
         ctx.font = `${fontSize}px ${fontFamily}`;
         textWidth = ctx.measureText(text).width;
     }
@@ -41,7 +40,6 @@ function drawTextOnCanvas() {
     ctx.textBaseline = textBaseline;
     ctx.fillText(text, x, y);
 }
-
 
 
 
