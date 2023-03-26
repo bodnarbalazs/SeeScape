@@ -2,27 +2,13 @@ var map;
 var canvas;
 var ctx;
 
-function drawTextOnCanvas() {
-    // Clear the canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    canvas = document.getElementById("myCanvas");
-    // Define the text settings
-    const text = "Place a Dronebase on the coast";
-    const font = "Arial";
-    const color = "white";
-    const textAlign = "center";
-    const textBaseline = "middle";
+function displayText(text) {
+    var textElement = document.createElement("h1");
 
-    // Calculate the x and y position to center the text
-    const x = canvas.width / 6;
-    const y = canvas.height / 8;
-    ctx.fillStyle = color;
-    ctx.font = font;
-    ctx.textAlign = textAlign;
-    ctx.textBaseline = textBaseline;
-    ctx.fillText(text, x, y);
-    // Write the text to the canvas
-    
+    textElement.textContent = text;
+    textElement.class = "displayText";
+
+    document.body.appendChild(textElement);
 }
 
 
@@ -53,7 +39,7 @@ async function initMap() {
 
             window.addEventListener("resize", resizeMap);
             resizeMap();
-
+            displayText("Place a drone base on the coast");
             google.maps.event.addListener(map, "click", async function (event) {
                 const latitude = event.latLng.lat();
                 const longitude = event.latLng.lng();
@@ -73,11 +59,11 @@ async function loadMapOptions() {
 }
 
 async function isLand(latitude, longitude) {
-    if (true) {
-
+    if (latitude<43.59) {
+        return true;
     }
     else {
-
+        return false;
     }
 }
 
@@ -95,8 +81,6 @@ const ratio = devicePixelRatio / backingStoreRatio;
 canvas.width = canvas.clientWidth * ratio;
 canvas.height = canvas.clientHeight * ratio;
 ctx.scale(ratio, ratio);
-
-drawTextOnCanvas();
 
 // Add click event listener to the canvas
 canvas.addEventListener("click", async function (event) {
