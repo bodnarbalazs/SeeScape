@@ -123,3 +123,14 @@ body{
     left: 769px;
 }
 
+#Base{
+    position: absolute;
+    width: 30;
+    height: 30;
+    border-radius: 15px;
+    background-color: red;
+    top: 1565px;
+    left: 541px;
+    z-index: 5;
+}
+
