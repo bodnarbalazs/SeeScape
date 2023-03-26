@@ -380,7 +380,7 @@ function boat2(){
 
 
         setTimeout(function() {
-            if (activeb == 0){
+            if (activeb == 0 && b2 == 0){
                 activeb = 1;
                 document.getElementById("policeBoat").style.display = "block";
                 document.getElementById("policeBoat").classList.add('policeboat_animate');
@@ -442,7 +442,7 @@ function boat3(){
         }, 4000);
 
         setTimeout(function() {
-            if (activeb == 0){
+            if (activeb == 0 && b3 ==0){
                 activeb = 1;
                 document.getElementById("policeBoat").style.display = "block";
                 document.getElementById("policeBoat").classList.add('policeboat_animate');
