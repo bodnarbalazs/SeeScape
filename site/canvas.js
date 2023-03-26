@@ -161,8 +161,10 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneBase").style.top = y + "px";
             document.getElementById("droneBase").style.left = x + "px";
             console.log("tök");
-
-            count = 1;
+            if (x != ""){
+                count += 1;
+            }
+            
             console.log("count" + count);
         };
     }
