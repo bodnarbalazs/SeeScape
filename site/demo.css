@@ -53,5 +53,6 @@
     position: absolute;
     top: 900px;
     left: 500px;
+    z-index: 50;
 }
 
