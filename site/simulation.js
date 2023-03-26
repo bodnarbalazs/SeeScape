@@ -10,6 +10,7 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneBase").style.top = y;
             document.getElementById("droneBase").style.left = x;
             count = 0;
+            console.log("tök")
         };
     }
     
