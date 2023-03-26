@@ -34,7 +34,6 @@ async function initMap() {
                 canvas.width = canvas.clientWidth * ratio;
                 canvas.height = canvas.clientHeight * ratio;
                 ctx.scale(ratio, ratio);
-                drawTextOnCanvas();
             };
 
             window.addEventListener("resize", resizeMap);
