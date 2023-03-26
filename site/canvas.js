@@ -317,17 +317,17 @@ function boat1(){
 
     if (b1 ==0 && active == 0){
         active = 1;
-        var basex = 541;
-        var basey = 1670;
-        var x = 121;
-        var y = 695;
+        var basex1 = 541;
+        var basey1 = 1670;
+        var x1 = 121;
+        var y1 = 695;
         document.getElementById("droneTop").style.display = "block";
         document.getElementById("droneTop").classList.add('droneTop_animate');
-        document.getElementById("droneTop").style.top = basey + "px";
-        document.getElementById("droneTop").style.left = basex + "px";
+        document.getElementById("droneTop").style.top = basey1 + "px";
+        document.getElementById("droneTop").style.left = basex1 + "px";
         const style = document.createElement('style');
-        console.log(basex, basey);
-        style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+        console.log(basex1, basey1);
+        style.innerHTML = "@keyframes my-animation {0% {top: " + basey1 + "px; left: "+basex1+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y1 + "px; left: "+x1+"px; transform: rotate(180deg);} 100% {top: " + basey1 + "px; left: "+basex1+"px; transform: rotate(180deg);}}";
         document.head.appendChild(style);
 
         setTimeout(function() {
@@ -353,17 +353,17 @@ function boat1(){
 function boat2(){
     if (b2 ==0 && active == 0){
         active = 1;
-        var basex = 541;
-        var basey = 1670;
-        var x = 477;
-        var y = 510;
+        var basex2 = 541;
+        var basey2 = 1670;
+        var x2 = 477;
+        var y2 = 510;
         document.getElementById("droneTop").style.display = "block";
         document.getElementById("droneTop").classList.add('droneTop_animate');
-        document.getElementById("droneTop").style.top = basey + "px";
-        document.getElementById("droneTop").style.left = basex + "px";
+        document.getElementById("droneTop").style.top = basey2 + "px";
+        document.getElementById("droneTop").style.left = basex2 + "px";
         const styled = document.createElement('style');
-        console.log(basex, basey);
-        styled.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+        console.log(basex2, basey2);
+        styled.innerHTML = "@keyframes my-animation {0% {top: " + basey2 + "px; left: "+basex2+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y2 + "px; left: "+x2+"px; transform: rotate(180deg);} 100% {top: " + basey2 + "px; left: "+basex2+"px; transform: rotate(180deg);}}";
         document.head.appendChild(styled);
 
         setTimeout(function() {
@@ -384,11 +384,11 @@ function boat2(){
                 activeb = 1;
                 document.getElementById("policeBoat").style.display = "block";
                 document.getElementById("policeBoat").classList.add('policeboat_animate');
-                document.getElementById("policeBoat").style.top = basey + "px";
-                document.getElementById("policeBoat").style.left = basex + "px";
+                document.getElementById("policeBoat").style.top = basey2 + "px";
+                document.getElementById("policeBoat").style.left = basex2 + "px";
                 const styleb = document.createElement('style');
-                console.log(basex, basey);
-                styleb.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+                console.log(basex2, basey2);
+                styleb.innerHTML = "@keyframes my-animation {0% {top: " + basey2 + "px; left: "+basex2+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y2 + "px; left: "+x2+"px; transform: rotate(180deg);} 100% {top: " + basey2 + "px; left: "+basex2+"px; transform: rotate(180deg);}}";
                 document.head.appendChild(styleb);
 
                 setTimeout(function() {
