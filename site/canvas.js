@@ -60,7 +60,7 @@ document.addEventListener("click", function (event) {
 
     console.log("X és Y:", x, y);
 
-    simulation.place_loc(longitude, latitude, x, y)
+    place_loc(longitude, latitude, x, y)
 });
 
 async function loadMapOptions() {
@@ -147,5 +147,22 @@ function animate() {
 }
 var animationId = requestAnimationFrame(animate);
 
+
+// animation
+
+count = 0;
+function place_loc(longitude, latitude, x, y){
+    console.log("kistök")
+    if (latitude<43.59) {
+        if (count == 0){
+            document.getElementById("droneBase").style.display = "block";
+            document.getElementById("droneBase").style.top = y;
+            document.getElementById("droneBase").style.left = x;
+            count = 0;
+            console.log("tök")
+        };
+    }
+    
+}
 
 
