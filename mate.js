@@ -1,5 +1,3 @@
-
-
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -39,7 +37,6 @@ function animate() {
 
   if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
     console.log("Vége öreg");
-    cancelAnimationFrame(animationId);
     animateCircle();
   } else {
     animationId = requestAnimationFrame(animate);
@@ -59,9 +56,18 @@ function animateCircle() {
   // Set the global alpha value back to 1
   ctx.globalAlpha = 1;
 
-  // Draw the half-circle
+  // Draw the circle
   ctx.beginPath();
   ctx.arc(endX, endY, radius, Math.PI, 2 * Math.PI);
+  ctx.shadowBlur = 10;
+  ctx.shadowColor = 'white';
+  ctx.strokeStyle = 'white';
+  ctx.stroke();
+
+  // Draw the line
+  ctx.beginPath();
+  ctx.moveTo(startX, startY);
+  ctx.lineTo(endX, endY);
   ctx.shadowBlur = 10;
   ctx.shadowColor = 'white';
   ctx.strokeStyle = 'white';
@@ -70,6 +76,7 @@ function animateCircle() {
   // Wait for the animation duration to finish before stopping the animation
   setTimeout(function() {
     console.log("Circle animation finished");
+    animationId = requestAnimationFrame(animate);
   }, animationDuration);
 }
 
