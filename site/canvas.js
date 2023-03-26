@@ -150,7 +150,7 @@ var animationId = requestAnimationFrame(animate);
 
 // animation
 
-count = 0;
+var count = 0;
 function place_loc(longitude, latitude, x, y){
     console.log("kistök");
     if (latitude<43.59) {
