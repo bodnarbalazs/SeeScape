@@ -28,11 +28,9 @@ function drawTextOnCanvas() {
     
 }
 function isMobile() {
-    const userAgent = window.navigator.userAgent;
-    const mobileKeywords = ["Android", "iPhone", "iPad", "iPod", "Windows Phone", "BlackBerry"];
-
-    return mobileKeywords.some((keyword) => userAgent.includes(keyword));
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
 
 
 async function initMap() {
