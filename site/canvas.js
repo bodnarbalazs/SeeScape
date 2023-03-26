@@ -271,7 +271,7 @@ function place_loc(longitude, latitude, x, y){
                 document.head.appendChild(style);
             }, 5000);
 
-            const list = ["You've found a pirate!", "You've found a drug smuggler!", "You've found human triffickers!", "You've found marine poachers!", "You've found a ship dumpling oil into the sea!"];
+            const list = ["You've found illegal pirates!", "You've found a drug smugglers boat!", "You've found human traffickers!", "You've found marine poachers!", "You've found a ship dumpling oil into the sea!"];
             const randomIndex = Math.floor(Math.random() * list.length);
             const randomElement = list[randomIndex];
 
