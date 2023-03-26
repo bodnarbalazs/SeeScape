@@ -8,13 +8,13 @@ function drawTextOnCanvas() {
     canvas = document.getElementById("myCanvas");
     // Define the text settings
     const text = "Place a Dronebase on the coast";
-    const font = "5vw Arial";
+    const font = "Arial";
     const color = "white";
     const textAlign = "center";
     const textBaseline = "middle";
 
     // Calculate the x and y position to center the text
-    const x = canvas.width / 8;
+    const x = canvas.width / 6;
     const y = canvas.height / 8;
     ctx.fillStyle = color;
     ctx.font = font;
