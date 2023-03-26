@@ -28,24 +28,6 @@ body{
     height: 100%;
     background-color: transparent;
     pointer-events: none;
-  }
-
-#droneBase{
-    position: absolute;
-    display: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    background-color: red;
-}
-
-#boat{
-    position: absolute;
-    display: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    background-color: rgb(0, 255, 51);
 }
 
 #instruction{
@@ -120,5 +102,22 @@ body{
     top: 900px;
     /* left: 100px; */
 
+}
+
+.boatimg{
+    height: 60px;
+}
+
+#Boat1{
+    top: 121px;
+    left: 695px;
+}
+#Boat2{
+    top: 477px;
+    left: 510px;
+}
+#Boat3{
+    top: 769px;
+    left: 1164px;
 }
 

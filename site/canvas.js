@@ -159,136 +159,136 @@ var basey = "";
 var x = "";
 var y = "";
 
-function place_loc(longitude, latitude, x, y){
+// function place_loc(longitude, latitude, x, y){
     
-    console.log("count" + count);
+//     console.log("count" + count);
 
-    if (latitude<43.59) {
-        if (count == 0){
-            document.getElementById("droneBase").style.display = "block";
-            document.getElementById("droneBase").style.top = y + "px";
-            document.getElementById("droneBase").style.left = x + "px";
-            document.getElementById("instruction").innerHTML = "Choose a location for a boat on water!";
-            console.log("tök");
+//     if (latitude<43.59) {
+//         if (count == 0){
+//             document.getElementById("droneBase").style.display = "block";
+//             document.getElementById("droneBase").style.top = y + "px";
+//             document.getElementById("droneBase").style.left = x + "px";
+//             document.getElementById("instruction").innerHTML = "Choose a location for a boat on water!";
+//             console.log("tök");
             
-            count += 1;
+//             count += 1;
             
-            basex = x;
-            basey = y;
+//             basex = x;
+//             basey = y;
 
-            Baselongitude = longitude;
-            Baselatitude = latitude;
+//             Baselongitude = longitude;
+//             Baselatitude = latitude;
 
-            console.log("count" + count);
-        };
-    }
+//             console.log("count" + count);
+//         };
+//     }
 
-    if (latitude>43.59) {
-        if (count == 1) {
-            document.getElementById("boat").style.display = "block";
-            document.getElementById("boat").style.top = y + "px";
-            document.getElementById("boat").style.left = x + "px";
+//     if (latitude>43.59) {
+//         if (count == 1) {
+//             document.getElementById("boat").style.display = "block";
+//             document.getElementById("boat").style.top = y + "px";
+//             document.getElementById("boat").style.left = x + "px";
             
-            Boatlongitude = longitude;
-            Boatlatitude = latitude;
+//             Boatlongitude = longitude;
+//             Boatlatitude = latitude;
             
-            var distance = distance_func(Baselatitude,Baselongitude,Boatlatitude,Boatlongitude);
-            distance = distance.toFixed(2)
-            document.getElementById("instruction").innerHTML = "The distance between the boat and the base: " + distance + "km";
-            count += 2;
-            console.log("count" + count);
+//             var distance = distance_func(Baselatitude,Baselongitude,Boatlatitude,Boatlongitude);
+//             distance = distance.toFixed(2)
+//             document.getElementById("instruction").innerHTML = "The distance between the boat and the base: " + distance + "km";
+//             count += 2;
+//             console.log("count" + count);
 
-            // dotted line
-            // var startX = basex+15;
-            // var startY = basey;
-            // var endX = x+15;
-            // var endY = y;
+//             // dotted line
+//             // var startX = basex+15;
+//             // var startY = basey;
+//             // var endX = x+15;
+//             // var endY = y;
 
-            // var lx = startX;
-            // var ly = startY;
-            // var DiffX = Math.abs(endX - startX) / 100;
-            // var DiffY = Math.abs(endY - startY) / 100;
+//             // var lx = startX;
+//             // var ly = startY;
+//             // var DiffX = Math.abs(endX - startX) / 100;
+//             // var DiffY = Math.abs(endY - startY) / 100;
 
-            // if (startX > endX) {
-            // DiffX = -DiffX;
-            // }
-            // if (startY > endY) {
-            // DiffY = -DiffY;
-            // }
+//             // if (startX > endX) {
+//             // DiffX = -DiffX;
+//             // }
+//             // if (startY > endY) {
+//             // DiffY = -DiffY;
+//             // }
 
-            // ctx.strokeStyle = '#fffff';
-            // ctx.lineWidth = 3;
+//             // ctx.strokeStyle = '#fffff';
+//             // ctx.lineWidth = 3;
 
-            // function animate() {
-            // ctx.clearRect(0, 0, canvas.width, canvas.height);
+//             // function animate() {
+//             // ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // ctx.beginPath();
-            // ctx.moveTo(startX, startY);
-            // ctx.lineTo(lx, ly);
-            // ctx.shadowBlur = 10;
-            // ctx.shadowColor = 'white';
-            // ctx.strokeStyle = 'white';
-            // ctx.stroke();
+//             // ctx.beginPath();
+//             // ctx.moveTo(startX, startY);
+//             // ctx.lineTo(lx, ly);
+//             // ctx.shadowBlur = 10;
+//             // ctx.shadowColor = 'white';
+//             // ctx.strokeStyle = 'white';
+//             // ctx.stroke();
 
-            // lx += DiffX;
-            // ly += DiffY;
+//             // lx += DiffX;
+//             // ly += DiffY;
 
-            // if ((DiffX > 0 && lx > endX) || (DiffX < 0 && lx < endX) || (DiffY > 0 && ly > endY) || (DiffY < 0 && ly < endY)) {
-            //     //console.log("Vége öreg");
-            // } else {
-            //     animationId = requestAnimationFrame(animate);
-            // }
-            // }
-            // var animationId = requestAnimationFrame(animate);
-            // dotted line
-            setTimeout(function() {
-                document.getElementById("droneTop").style.display = "block";
-                document.getElementById("droneTop").classList.add('droneTop_animate');
-                document.getElementById("droneTop").style.top = basey + "px";
-                document.getElementById("droneTop").style.left = basex + "px";
-                const style = document.createElement('style');
-                console.log(basex, basey);
-                style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
-                document.head.appendChild(style);
-            }, 1000);
+//             // if ((DiffX > 0 && lx > endX) || (DiffX < 0 && lx < endX) || (DiffY > 0 && ly > endY) || (DiffY < 0 && ly < endY)) {
+//             //     //console.log("Vége öreg");
+//             // } else {
+//             //     animationId = requestAnimationFrame(animate);
+//             // }
+//             // }
+//             // var animationId = requestAnimationFrame(animate);
+//             // dotted line
+//             setTimeout(function() {
+//                 document.getElementById("droneTop").style.display = "block";
+//                 document.getElementById("droneTop").classList.add('droneTop_animate');
+//                 document.getElementById("droneTop").style.top = basey + "px";
+//                 document.getElementById("droneTop").style.left = basex + "px";
+//                 const style = document.createElement('style');
+//                 console.log(basex, basey);
+//                 style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+//                 document.head.appendChild(style);
+//             }, 1000);
 
-            setTimeout(function() {
-                document.getElementById("droneTop").style.display = "none";
-            }, 9500);
+//             setTimeout(function() {
+//                 document.getElementById("droneTop").style.display = "none";
+//             }, 9500);
 
-            setTimeout(function() {
-                document.getElementById("policeBoat").style.display = "none";
-            }, 21000);
+//             setTimeout(function() {
+//                 document.getElementById("policeBoat").style.display = "none";
+//             }, 21000);
             
-            setTimeout(function() {
-                document.getElementById("policeBoat").style.display = "block";
-                document.getElementById("policeBoat").classList.add('policeboat_animate');
-                document.getElementById("policeBoat").style.top = basey + "px";
-                document.getElementById("policeBoat").style.left = basex + "px";
-                const style = document.createElement('style');
-                console.log(basex, basey);
-                style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
-                document.head.appendChild(style);
-            }, 5000);
+//             setTimeout(function() {
+//                 document.getElementById("policeBoat").style.display = "block";
+//                 document.getElementById("policeBoat").classList.add('policeboat_animate');
+//                 document.getElementById("policeBoat").style.top = basey + "px";
+//                 document.getElementById("policeBoat").style.left = basex + "px";
+//                 const style = document.createElement('style');
+//                 console.log(basex, basey);
+//                 style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+//                 document.head.appendChild(style);
+//             }, 5000);
 
-            const list = ["You've found illegal pirates!", "You've found a drug smugglers boat!", "You've found human traffickers!", "You've found marine poachers!", "You've found a ship dumping oil into the sea!"];
-            const randomIndex = Math.floor(Math.random() * list.length);
-            const randomElement = list[randomIndex];
+//             const list = ["You've found illegal pirates!", "You've found a drug smugglers boat!", "You've found human traffickers!", "You've found marine poachers!", "You've found a ship dumping oil into the sea!"];
+//             const randomIndex = Math.floor(Math.random() * list.length);
+//             const randomElement = list[randomIndex];
 
-            setTimeout(function() {
-                document.getElementById("instruction").innerHTML = randomElement;
-            }, 5000);
+//             setTimeout(function() {
+//                 document.getElementById("instruction").innerHTML = randomElement;
+//             }, 5000);
 
-            setTimeout(function() {
-                document.getElementById("demoLink2").style.display = "block";
-            }, 21000);
+//             setTimeout(function() {
+//                 document.getElementById("demoLink2").style.display = "block";
+//             }, 21000);
             
             
-        }   
+//         }   
 
-    }
+//     }
     
-}
+// }
 
 function distance_func(Baselatitude, Baselongitude, Boatlatitude, Boatlongitude) {
     const R = 6371; // Radius of the earth in km
@@ -308,4 +308,4 @@ function deg2rad(deg) {
 }
 
 
-document.addEventListener("click", place_loc (longitude, latitude, x, y))
+// document.addEventListener("click", place_loc (longitude, latitude, x, y))
