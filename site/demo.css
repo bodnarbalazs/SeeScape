@@ -75,7 +75,7 @@ body{
 
 .droneTop_animate{
     animation-name: my-animation;
-    animation-duration: 8s;
+    animation-duration: 6s;
 }
 
 .policeboat_animate{
@@ -178,7 +178,7 @@ body{
 }
 
 .kosher{
-    color: red;
+    color: green;
     font-weight: 800;
 }
 

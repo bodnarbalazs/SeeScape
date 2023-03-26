@@ -333,18 +333,18 @@ function boat1(){
         setTimeout(function() {
             document.getElementById("droneTop").classList.remove('droneTop_animate');
             document.head.removeChild(style)
-        }, 8000);
+        }, 6000);
 
         setTimeout(function() {
             const info = document.createElement('h2')
             info.classList.add("kosher")
             info.innerHTML = "IMO8364936 <br> Legal fishing"
             document.getElementById("boatlable1").appendChild(info)
-        }, 4000);
+        }, 3000);
 
         setTimeout(function() {
             active = 0;
-        }, 8000);
+        }, 6000);
         
         b1 = 1;
     }
@@ -370,14 +370,14 @@ function boat2(){
         setTimeout(function() {
             document.getElementById("droneTop").classList.remove('droneTop_animate');
             document.head.removeChild(styled)
-        }, 8000);
+        }, 6000);
 
         setTimeout(function() {
             const info = document.createElement('h2')
             info.classList.add("criminal")
             info.innerHTML = "IMO234945 <br> Dumping oil"
             document.getElementById("boatlable2").appendChild(info)
-        }, 4000);
+        }, 3000);
 
 
         setTimeout(function() {
@@ -394,7 +394,7 @@ function boat2(){
 
                 setTimeout(function() {
                     activeb = 0;
-                }, 21000);
+                }, 15000);
             // }
            
         }, 5000);
@@ -402,12 +402,12 @@ function boat2(){
         setTimeout(function() {
             document.getElementById("policeBoat").classList.remove('policeBoat_animate');
             document.head.removeChild(styleb);
-        }, 21000);
+        }, 15000);
 
 
         setTimeout(function() {
             active = 0;
-        }, 8000);
+        }, 6000);
         
         b2 = 1;
     }
@@ -433,14 +433,14 @@ function boat3(){
         setTimeout(function() {
             document.getElementById("droneTop").classList.remove('droneTop_animate');
             document.head.removeChild(style)
-        }, 8000);
+        }, 6000);
 
         setTimeout(function() {
             const info = document.createElement('h2')
             info.classList.add("criminal")
             info.innerHTML = "IMO485736 <br> Illegal fishing"
             document.getElementById("boatlable3").appendChild(info)
-        }, 4000);
+        }, 3000);
 
         setTimeout(function() {
             // if (activeb == 0){
@@ -456,9 +456,9 @@ function boat3(){
 
                 setTimeout(function() {
                     activeb = 0;
-                }, 17000);
+                }, 15000);
             // }
-        }, 5000);
+        }, 3000);
 
         setTimeout(function() {
             document.getElementById("policeBoat2").classList.remove('policeBoat_animate');
@@ -467,7 +467,7 @@ function boat3(){
 
         setTimeout(function() {
             active = 0;
-        }, 8000);
+        }, 6000);
         
         b3 = 1;
     }
