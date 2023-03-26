@@ -17,7 +17,7 @@ function drawTextOnCanvas() {
     const x = canvas.width / 4;
     const y = canvas.height / 8;
     if (isMobile()) {
-        x = window.ClientRect.width -window.ClientRect.width-window.ClientRect.width / 4;
+        x = window.ClientRect.width-window.ClientRect.width / 4;
         y = window.ClientRect.height-window.ClientRect.height / 8;
         alert("ffuuuck");
     }
