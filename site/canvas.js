@@ -54,7 +54,7 @@ document.addEventListener("click", function (event) {
     const x = event.clientX;
     const y = event.clientY;
 
-    console.log("Clicked coordinates:", x, y);
+    console.log("X és Y:", x, y);
 });
 async function loadMapOptions() {
     const response = await fetch("assets/mapOptions.json");
