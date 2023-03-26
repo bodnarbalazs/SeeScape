@@ -2,7 +2,7 @@
   "mapOptions": {
     "zoom": 11,
     "center": {
-      "lat": 40.7128,
+      "lat": 44.07128,
       "lng": -74.0060
     },
     "disableDefaultUI": true,
