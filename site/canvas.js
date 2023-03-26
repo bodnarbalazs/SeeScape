@@ -174,6 +174,7 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("boat").style.display = "block";
             document.getElementById("boat").style.top = y + "px";
             document.getElementById("boat").style.left = x + "px";
+            document.getElementById("instruction").innerHTML = "Choose a location for a boat on water!";
 
             count = 2;
             console.log("count" + count);
