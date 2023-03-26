@@ -146,4 +146,16 @@ body{
     top: 790px;
 }
 
+#boatlable2{
+    position: absolute;
+    left:539px;
+    top: 586px;
+}
+
+#boatlable3{
+    position: absolute;
+    left: 780px;
+    top: 1249px;
+}
+
 
