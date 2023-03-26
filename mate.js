@@ -36,7 +36,7 @@ function animate() {
   y += DiffY;
 
   if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
-    console.log("Vége öreg");
+    //console.log("Vége öreg");
     animateCircle();
   } else {
     animationId = requestAnimationFrame(animate);
@@ -52,6 +52,14 @@ function animateCircle() {
 
   // Clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+ context.lineWidth = 10;
+ context.strokeStyle = '#ad2323';
+ context.shadowOffsetX = 0;
+ context.shadowOffsetY = 0;
+ context.shadowBlur = 10;
+ context.shadowColor = '#656565';
+
 
   // Set the global alpha value back to 1
   ctx.globalAlpha = 1;
@@ -75,7 +83,6 @@ function animateCircle() {
 
   // Wait for the animation duration to finish before stopping the animation
   setTimeout(function() {
-    console.log("Circle animation finished");
     animationId = requestAnimationFrame(animate);
   }, animationDuration);
 }
