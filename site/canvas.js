@@ -380,7 +380,7 @@ function boat2(){
             active = 0;
         }, 8000);
         
-        b1 = 1;
+        b2 = 1;
     }
     
 }
@@ -416,7 +416,7 @@ function boat3(){
             active = 0;
         }, 8000);
         
-        b1 = 1;
+        b3 = 1;
     }
 }
 
