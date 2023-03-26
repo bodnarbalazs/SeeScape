@@ -201,7 +201,7 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneTop").style.top = basey + "px";
             document.getElementById("droneTop").style.left = basex + "px";
             const style = document.createElement('style')
-            style.innerHTML = "@keyframes my-animation {49% {transform: rotate(0deg);} 50% {rotate: (180deg);transform: translateX(" + x + "px) translateY("+y+"px);}100% {    transform: translateX("+basex+"px) translateY("+basey+");}}"
+            style.innerHTML = "@keyframes my-animation {0% {transform: translateX("+basex+"px) translateY("+basey+"px);} 49% {transform: rotate(0deg);} 50% {rotate: (180deg);transform: translateX(" + x + "px) translateY("+y+"px);}100% {    transform: translateX("+basex+"px) translateY("+basey+"px);}}"
 
             
             

@@ -62,10 +62,8 @@
     animation-duration: 6s;
 }
 
-@keyframes my-animation {
-    0% {
-        transform: translateX(500px) translateY(1600px);
-    } 
+/* @keyframes my-animation {
+    0% {transform: translateX("+basex+"px) translateY("+basey+"px);} 
     49% {
         transform: rotate(0deg);
     } 
@@ -75,5 +73,5 @@
     100% {
         transform: translateX(500px) translateY(1600px);
     }
-}
+} */
 
