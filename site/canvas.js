@@ -446,12 +446,12 @@ function boat3(){
             // if (activeb == 0){
                 activeb = 1;
                 document.getElementById("policeBoat2").style.display = "block";
-                document.getElementById("policeBoat2").classList.add('policeboat_animate');
+                document.getElementById("policeBoat2").classList.add('policeboat_animate2');
                 document.getElementById("policeBoat2").style.top = basey + "px";
                 document.getElementById("policeBoat2").style.left = basex + "px";
                 const styleb = document.createElement('style');
                 console.log(basex, basey);
-                styleb.innerHTML = "@keyframes my-animation2 {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+                styleb.innerHTML = "@keyframes my-animation3 {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
                 document.head.appendChild(styleb);
 
                 setTimeout(function() {
@@ -461,7 +461,7 @@ function boat3(){
         }, 3000);
 
         setTimeout(function() {
-            document.getElementById("policeBoat2").classList.remove('policeBoat_animate');
+            document.getElementById("policeBoat2").classList.remove('policeboat_animate2');
             document.head.removeChild(styleb);
         }, 17000);
 
