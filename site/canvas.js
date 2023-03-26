@@ -390,8 +390,8 @@ function boat3(){
         active = 1;
         var basex = 541;
         var basey = 1565;
-        var x = 769;
-        var y = 1164;
+        var x = 720;
+        var y = 870;
         document.getElementById("droneTop").style.display = "block";
         document.getElementById("droneTop").classList.add('droneTop_animate');
         document.getElementById("droneTop").style.top = basey + "px";
