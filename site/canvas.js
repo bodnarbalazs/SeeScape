@@ -156,7 +156,8 @@ var Boatlongitude = "";
 var Boatlatitude = "";
 var basex = "";
 var basey = "";
-
+var x = "";
+var y = "";
 
 function place_loc(longitude, latitude, x, y){
     
@@ -203,8 +204,8 @@ function place_loc(longitude, latitude, x, y){
             var endX = x;
             var endY = y;
 
-            var x = startX;
-            var y = startY;
+            var lx = startX;
+            var ly = startY;
             var DiffX = Math.abs(endX - startX) / 100;
             var DiffY = Math.abs(endY - startY) / 100;
 
@@ -223,14 +224,14 @@ function place_loc(longitude, latitude, x, y){
 
             ctx.beginPath();
             ctx.moveTo(startX, startY);
-            ctx.lineTo(x, y);
+            ctx.lineTo(lx, ly);
             ctx.shadowBlur = 10;
             ctx.shadowColor = 'white';
             ctx.strokeStyle = 'white';
             ctx.stroke();
 
-            x += DiffX;
-            y += DiffY;
+            lx += DiffX;
+            ly += DiffY;
 
             if ((DiffX > 0 && x > endX) || (DiffX < 0 && x < endX) || (DiffY > 0 && y > endY) || (DiffY < 0 && y < endY)) {
                 //console.log("Vége öreg");
