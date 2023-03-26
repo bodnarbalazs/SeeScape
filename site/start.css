@@ -137,6 +137,6 @@ nav h1{
     }
 
     100% {
-        transform: translateX(250%) translateY(100%);
+        transform: translateX(200%) translateY(100%);
     }
 }
