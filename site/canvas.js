@@ -372,6 +372,7 @@ function boat2(){
 
         setTimeout(function() {
             const info = document.createElement('h2')
+            info.classList.add("criminal")
             info.innerHTML = "IMO234945 <br> Dumping oil"
             document.getElementById("boatlable2").appendChild(info)
         }, 4000);
@@ -408,6 +409,7 @@ function boat3(){
 
         setTimeout(function() {
             const info = document.createElement('h2')
+            info.classList.add("criminal")
             info.innerHTML = "IMO485736 <br> Illegal fishing"
             document.getElementById("boatlable3").appendChild(info)
         }, 4000);
