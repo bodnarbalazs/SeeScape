@@ -103,3 +103,16 @@ body{
     }
 } */
 
+#demoLink2{
+    width: 60%;
+    color: white;
+    align-self: center;
+    font-weight: 700;
+    margin: 0;
+    height: 150px;
+    font-size: 50px;
+    border-radius: 20px;
+    background-color: rgb(0, 64, 255);
+    display: none;
+}
+

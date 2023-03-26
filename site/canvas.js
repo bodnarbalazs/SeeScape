@@ -277,7 +277,11 @@ function place_loc(longitude, latitude, x, y){
 
             setTimeout(function() {
                 document.getElementById("instruction").innerHTML = randomElement;
-              }, 5000);
+            }, 5000);
+
+            setTimeout(function() {
+                document.getElementById("demoLink2").style.display = "block";
+            }, 38000);
             
             
         }   
