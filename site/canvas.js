@@ -332,7 +332,7 @@ function boat1(){
         setTimeout(function() {
             document.getElementById("droneTop").classList.remove('droneTop_animate');
             document.head.removeChild(style)
-        }, 8500);
+        }, 8000);
 
         setTimeout(function() {
             const info = document.createElement('h2')
@@ -368,7 +368,7 @@ function boat2(){
         setTimeout(function() {
             document.getElementById("droneTop").classList.remove('droneTop_animate');
             document.head.removeChild(style)
-        }, 8500);
+        }, 8000);
 
         setTimeout(function() {
             const info = document.createElement('h2')
@@ -404,7 +404,7 @@ function boat3(){
         setTimeout(function() {
             document.getElementById("droneTop").classList.remove('droneTop_animate');
             document.head.removeChild(style)
-        }, 8500);
+        }, 8000);
 
         setTimeout(function() {
             const info = document.createElement('h2')
