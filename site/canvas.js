@@ -350,70 +350,74 @@ function boat1(){
 }
 
 function boat2(){
-    active = 1;
-    var basex = 541;
-    var basey = 1565;
-    var x = 477;
-    var y = 510;
-    document.getElementById("droneTop").style.display = "block";
-    document.getElementById("droneTop").classList.add('droneTop_animate');
-    document.getElementById("droneTop").style.top = basey + "px";
-    document.getElementById("droneTop").style.left = basex + "px";
-    const style = document.createElement('style');
-    console.log(basex, basey);
-    style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
-    document.head.appendChild(style);
+    if (b1 ==0 && active == 0){
+        active = 1;
+        var basex = 541;
+        var basey = 1565;
+        var x = 477;
+        var y = 510;
+        document.getElementById("droneTop").style.display = "block";
+        document.getElementById("droneTop").classList.add('droneTop_animate');
+        document.getElementById("droneTop").style.top = basey + "px";
+        document.getElementById("droneTop").style.left = basex + "px";
+        const style = document.createElement('style');
+        console.log(basex, basey);
+        style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+        document.head.appendChild(style);
 
-    setTimeout(function() {
-        document.getElementById("droneTop").classList.remove('droneTop_animate');
-        document.head.removeChild(style)
-    }, 8500);
+        setTimeout(function() {
+            document.getElementById("droneTop").classList.remove('droneTop_animate');
+            document.head.removeChild(style)
+        }, 8500);
 
-    setTimeout(function() {
-        const info = document.createElement('h2')
-        info.innerHTML = "IMO234945 <br> Wrong GPS data"
-        document.getElementById("boatlable2").appendChild(info)
-    }, 4000);
+        setTimeout(function() {
+            const info = document.createElement('h2')
+            info.innerHTML = "IMO234945 <br> Wrong GPS data"
+            document.getElementById("boatlable2").appendChild(info)
+        }, 4000);
 
-    setTimeout(function() {
-        active = 0;
-    }, 8000);
-    
-    b1 = 1;
+        setTimeout(function() {
+            active = 0;
+        }, 8000);
+        
+        b1 = 1;
+    }
     
 }
 
 function boat3(){
-    active = 1;
-    var basex = 541;
-    var basey = 1565;
-    var x = 769;
-    var y = 1164;
-    document.getElementById("droneTop").style.display = "block";
-    document.getElementById("droneTop").classList.add('droneTop_animate');
-    document.getElementById("droneTop").style.top = basey + "px";
-    document.getElementById("droneTop").style.left = basex + "px";
-    const style = document.createElement('style');
-    console.log(basex, basey);
-    style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
-    document.head.appendChild(style);
+    if (b1 ==0 && active == 0){
+        active = 1;
+        var basex = 541;
+        var basey = 1565;
+        var x = 769;
+        var y = 1164;
+        document.getElementById("droneTop").style.display = "block";
+        document.getElementById("droneTop").classList.add('droneTop_animate');
+        document.getElementById("droneTop").style.top = basey + "px";
+        document.getElementById("droneTop").style.left = basex + "px";
+        const style = document.createElement('style');
+        console.log(basex, basey);
+        style.innerHTML = "@keyframes my-animation {0% {top: " + basey + "px; left: "+basex+"px;} 49% {transform: rotate(0deg);} 50% {top: " + y + "px; left: "+x+"px; transform: rotate(180deg);} 100% {top: " + basey + "px; left: "+basex+"px; transform: rotate(180deg);}}";
+        document.head.appendChild(style);
 
-    setTimeout(function() {
-        document.getElementById("droneTop").classList.remove('droneTop_animate');
-        document.head.removeChild(style)
-    }, 8500);
+        setTimeout(function() {
+            document.getElementById("droneTop").classList.remove('droneTop_animate');
+            document.head.removeChild(style)
+        }, 8500);
 
-    setTimeout(function() {
-        const info = document.createElement('h2')
-        info.innerHTML = "IMO485736 <br> Illegal fishing"
-        document.getElementById("boatlable3").appendChild(info)
-    }, 4000);
+        setTimeout(function() {
+            const info = document.createElement('h2')
+            info.innerHTML = "IMO485736 <br> Illegal fishing"
+            document.getElementById("boatlable3").appendChild(info)
+        }, 4000);
 
-    setTimeout(function() {
-        active = 0;
-    }, 8000);
-    
-    b1 = 1;
+        setTimeout(function() {
+            active = 0;
+        }, 8000);
+        
+        b1 = 1;
+    }
 }
 
 
