@@ -1,3 +1,3 @@
 function loadStart() {
-    location.replace("/demo.html");
+    location.replace("start.html");
 }
