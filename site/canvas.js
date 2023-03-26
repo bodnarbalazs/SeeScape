@@ -149,10 +149,10 @@ var animationId = requestAnimationFrame(animate);
 
 
 // animation
-
+var count = 0;
 
 function place_loc(longitude, latitude, x, y){
-    var count = 0;
+    
     console.log("count" + count);
 
     if (latitude<43.59) {
@@ -162,7 +162,7 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("droneBase").style.left = x + "px";
             console.log("tök");
 
-            count += 1;
+            count = 1;
             console.log("count" + count);
         };
     }
@@ -173,7 +173,7 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("boat").style.top = y + "px";
             document.getElementById("boat").style.left = x + "px";
 
-            count += 1;
+            count = 2;
             console.log("count" + count);
         }
     }
