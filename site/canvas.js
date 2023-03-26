@@ -19,6 +19,7 @@ function drawTextOnCanvas() {
     if (isMobile()) {
         x = window.ClientRect.width / 4;
         y = window.ClientRect.height / 8;
+        alert("ffuuuck");
     }
     
 
