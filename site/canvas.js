@@ -154,7 +154,8 @@ var Baselongitude = "";
 var Baselatitude = "";
 var Boatlongitude = "";
 var Boatlatitude = "";
-
+var basex = "";
+var basey = "";
 
 
 function place_loc(longitude, latitude, x, y){
@@ -171,6 +172,9 @@ function place_loc(longitude, latitude, x, y){
             
             count += 1;
             
+            basex = x;
+            basey = y;
+
             Baselongitude = longitude;
             Baselatitude = latitude;
 
@@ -191,7 +195,17 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("instruction").innerHTML = "The distance between the boat and the base: " + distance + "km";
             count += 2;
             console.log("count" + count);
-        }
+
+            document.getElementById("droneTop").style.display = "block";
+            document.getElementById("droneTop").classList.add('droneTop_animate');
+            document.getElementById("droneTop").style.top = basey + "px";
+            document.getElementById("droneTop").style.left = basex + "px";
+            style.innerHTML = "@keyframes my-animation {49% {transform: rotate: (0);}50% {rotate: (180deg);transform: translateX(" + x + "px) translateY("+y+"px);}100% {    transform: translateX("+basex+"px) translateY("+basey+");}}"
+
+            
+            
+        }   
+
     }
     
 }
