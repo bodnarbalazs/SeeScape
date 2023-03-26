@@ -350,6 +350,7 @@ function boat1(){
 }
 
 function boat2(){
+    active = 1;
     var basex = 541;
     var basey = 1565;
     var x = 477;
@@ -383,6 +384,7 @@ function boat2(){
 }
 
 function boat3(){
+    active = 1;
     var basex = 541;
     var basey = 1565;
     var x = 769;
