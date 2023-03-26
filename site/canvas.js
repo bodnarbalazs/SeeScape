@@ -150,6 +150,12 @@ var animationId = requestAnimationFrame(animate);
 
 // animation
 var count = 0;
+var Baselongitude = "";
+var Baselatitude = "";
+var Boatlongitude = "";
+var Boatlatitude = "";
+
+
 
 function place_loc(longitude, latitude, x, y){
     
@@ -165,7 +171,9 @@ function place_loc(longitude, latitude, x, y){
             
             count += 1;
             
-            
+            Baselongitude = longitude;
+            Baselatitude = latitude;
+
             console.log("count" + count);
         };
     }
@@ -176,6 +184,8 @@ function place_loc(longitude, latitude, x, y){
             document.getElementById("boat").style.top = y + "px";
             document.getElementById("boat").style.left = x + "px";
             
+            Boatlongitude = longitude;
+            Boatlatitude = latitude;
 
             count = 2;
             console.log("count" + count);
