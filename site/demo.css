@@ -2,8 +2,6 @@
 
 body{
     width: 100vw;
-    overflow: hidden;
-    position: relative;
 }
 
 #map {
@@ -19,8 +17,7 @@ body{
 #content{
     display: flex;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
+
 }
 #myCanvas {
     position: absolute;
