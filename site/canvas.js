@@ -375,7 +375,7 @@ function boat2(){
         setTimeout(function() {
             const info = document.createElement('h2')
             info.classList.add("criminal")
-            info.innerHTML = "IMO234945 <br> Dumping oil"
+            info.innerHTML = "IMO234945 <br> Oil dumping"
             document.getElementById("boatlable2").appendChild(info)
         }, 3000);
 
