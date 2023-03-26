@@ -83,6 +83,11 @@ body{
     animation-duration: 12s;
 }
 
+.policeboat_animate2{
+    animation-name: my-animation3;
+    animation-duration: 12s;
+}
+
 /* @keyframes my-animation {
     0% {transform: translateX("+basex+"px) translateY("+basey+"px);} 
     49% {
