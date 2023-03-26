@@ -135,14 +135,15 @@ body{
 }
 
 .boatlable{
-    font-size: 15px;
+    font-size: 20px;
+    color: white;
 
 }
 
 #boatlable1{
     position: absolute;
     left:200px;
-    top:677px;
+    top: 790px;
 }
 
 
