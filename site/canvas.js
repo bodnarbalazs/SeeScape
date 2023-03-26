@@ -43,14 +43,19 @@ async function initMap() {
                 const latitude = event.latLng.lat();
                 const longitude = event.latLng.lng();
                 console.log("Clicked coordinates:", latitude, longitude);
-                console.log("X és Y:", event.clientX,event.clientY );
                 const land = await isLand(latitude, longitude);
                 console.log(land ? "Land" : "Water");
             });
+
         })
         .catch((error) => console.error("Error fetching map options:", error));
 }
+document.addEventListener("click", function (event) {
+    const x = event.clientX;
+    const y = event.clientY;
 
+    console.log("Clicked coordinates:", x, y);
+});
 async function loadMapOptions() {
     const response = await fetch("assets/mapOptions.json");
     const data = await response.json();
