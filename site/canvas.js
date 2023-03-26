@@ -307,14 +307,15 @@ function deg2rad(deg) {
     return deg * (Math.PI/180)
 }
 
-b1 = 0
-b2 = 0
-b3 = 0
-
+b1 = 0;
+b2 = 0;
+b3 = 0;
+active = 0;
 
 function boat1(){
 
-    if (b1 ==0){
+    if (b1 ==0 && active == 0){
+        active = 1;
         var basex = 541;
         var basey = 1565;
         var x = 121;
@@ -333,13 +334,15 @@ function boat1(){
             document.head.removeChild(style)
         }, 8500);
 
-        
-
         setTimeout(function() {
             const info = document.createElement('h2')
             info.innerHTML = "IMO8364936 <br> Legal fishing"
             document.getElementById("boatlable1").appendChild(info)
         }, 4000);
+
+        setTimeout(function() {
+            active = 0;
+        }, 8000);
         
         b1 = 1;
     }
@@ -364,6 +367,18 @@ function boat2(){
         document.getElementById("droneTop").classList.remove('droneTop_animate');
         document.head.removeChild(style)
     }, 8500);
+
+    setTimeout(function() {
+        const info = document.createElement('h2')
+        info.innerHTML = "IMO234945 <br> Wrong GPS data"
+        document.getElementById("boatlable2").appendChild(info)
+    }, 4000);
+
+    setTimeout(function() {
+        active = 0;
+    }, 8000);
+    
+    b1 = 1;
     
 }
 
@@ -385,6 +400,18 @@ function boat3(){
         document.getElementById("droneTop").classList.remove('droneTop_animate');
         document.head.removeChild(style)
     }, 8500);
+
+    setTimeout(function() {
+        const info = document.createElement('h2')
+        info.innerHTML = "IMO485736 <br> Illegal fishing"
+        document.getElementById("boatlable3").appendChild(info)
+    }, 4000);
+
+    setTimeout(function() {
+        active = 0;
+    }, 8000);
+    
+    b1 = 1;
 }
 
 
