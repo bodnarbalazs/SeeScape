@@ -43,7 +43,7 @@ async function initMap() {
                 const latitude = event.latLng.lat();
                 const longitude = event.latLng.lng();
                 console.log("Clicked coordinates:", latitude, longitude);
-
+                console.log("X és Y:", clientX,clienY );
                 const land = await isLand(latitude, longitude);
                 console.log(land ? "Land" : "Water");
             });
@@ -133,8 +133,5 @@ function animate() {
     animationId = requestAnimationFrame(animate);
   }
 }
-
-
-
 var animationId = requestAnimationFrame(animate);
 
