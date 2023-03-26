@@ -16,9 +16,6 @@ function drawTextOnCanvas() {
     // Calculate the x and y position to center the text
     const x = canvas.width / 4;
     const y = canvas.height / 8;
-    if (isMobile()) {
-        color = "red";
-    }
     ctx.fillStyle = color;
     ctx.font = font;
     ctx.textAlign = textAlign;
@@ -26,9 +23,6 @@ function drawTextOnCanvas() {
     ctx.fillText(text, x, y);
     // Write the text to the canvas
     
-}
-function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
 
